@@ -3,6 +3,8 @@
     flex-direction: row;
     align-content: center;
     justify-content: center;
+    position: relative;
+    z-index: 2;
     margin-top: 30px;
     
 }
@@ -24,4 +26,7 @@ button {
     all: unset;
 }
 
-.nav_button {}
+.nav_button {
+    color: aliceblue;
+    font-weight: bold;
+}
