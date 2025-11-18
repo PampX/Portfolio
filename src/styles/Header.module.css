@@ -3,9 +3,11 @@
     flex-direction: row;
     align-content: center;
     justify-content: center;
-    position: relative;
+    position: fixed;
     z-index: 2;
     margin-top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
     
 }
 
@@ -17,8 +19,8 @@
     background: rgba(255, 255, 255, 0.16);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8.8px);
-    -webkit-backdrop-filter: blur(8.8px);
+    backdrop-filter: blur(6.8px);
+    -webkit-backdrop-filter: blur(6.8px);
     border: 1px solid rgba(255, 255, 255, 0.23);
 }
 
@@ -29,4 +31,12 @@ button {
 .nav_button {
     color: aliceblue;
     font-weight: bold;
+    transition: color 200ms ease, transform 160ms cubic-bezier(.2,.8,.2,1);
+    will-change: color, transform;
+}
+    
+.nav_button:hover{
+    text-decoration: underline;
+    color: #B19EEF;
+    transform: translateY(-3px);
 }

@@ -2,7 +2,21 @@ import PixelBlast from '../components/PixelBlast'
 import RotatingText from '../components/RotatingText'
 import '../styles/Home.css'
 
-const rotatingTexts = ['IA', '3D', 'Gaming', 'Projects']
+const rotatingTexts = [
+  'IA',
+  'Machine Learning',
+  "Deep Learning",
+  "Reinforcement Learning",
+  'Développement',
+  'Programmation',
+  'Lead Developer',
+  '3D',
+  'Game Development',
+  'Gaming',
+  'Freelance', 
+  "<3", 
+  "<TB/>"
+];
 
 export default function Home() {
     return (
@@ -37,7 +51,7 @@ export default function Home() {
                         exit={{ y: '-120%' }}
                         staggerDuration={0.025}
                         transition={{ type: 'spring', damping: 30, stiffness: 400 }}
-                        rotationInterval={2000}
+                        rotationInterval={2500}
                     />
                 </div>
             </section>

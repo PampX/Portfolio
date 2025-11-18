@@ -7,15 +7,17 @@ import './App.css'
 
 import Header from './components/Header'
 
-export default function App(){
+export default function App() {
   return (
     <Router>
-      <Header/>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/work' element={<Work/>}/>
-        <Route path='/about' element={<About/>}/>
-      </Routes>
+      <div className="layout">
+        <Header />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/work' element={<Work />} />
+          <Route path='/about' element={<About />} />
+        </Routes>
+      </div>
     </Router>
   )
 }
