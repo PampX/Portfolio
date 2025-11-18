@@ -3,7 +3,7 @@ import Home from './pages/Home'
 import Work from './pages/Work'
 import About from './pages/About'
 
-import './App.css'
+import './App.css' 
 
 import Header from './components/Header'
 
