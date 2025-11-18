@@ -61,3 +61,11 @@
 .hero-rotating-text__element {
     display: inline-block;
 }
+
+.homePC{
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

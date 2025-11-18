@@ -1,18 +1,18 @@
 import { useNavigate } from "react-router-dom"
-
+import '../styles/ProjectCard.css'
 
 export default function ProjectCard({title, description, picture, link, topics = []}){
     const navigate = useNavigate()
     const handleClick = () => navigate(link)
     return (
-        <div onClick={handleClick}>
+        <div className="PCcontainer" onClick={handleClick}>
 
-            <img src={picture} alt="project"/>
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <div>
+            <img className="PCpicture" src={picture} alt="project"/>
+            <h3 className="PCtitle">{title}</h3>
+            <p className="PCdescription">{description}</p>
+            <div className="PCtopics">
                 {topics.map(topic => (
-                    <div key={topic} style={{backgroundColor: topic.color}}>
+                    <div className="PCtopic" key={topic} style={{backgroundColor: topic.color}}>
                         {topic.name}
                     </div>
                 ))}
