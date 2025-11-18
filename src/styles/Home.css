@@ -26,6 +26,11 @@
     z-index: 0;
 }
 
+.hero-heading{
+    font-size: 27px;
+    margin: 0;
+}
+
 
 .hero-content {
     min-height: 0; 
