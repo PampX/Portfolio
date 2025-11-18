@@ -1,4 +1,5 @@
 import PixelBlast from '../components/PixelBlast'
+import ProjectCard from '../components/ProjectCard';
 import RotatingText from '../components/RotatingText'
 import '../styles/Home.css'
 
@@ -17,6 +18,11 @@ const rotatingTexts = [
   "<3", 
   "<TB/>"
 ];
+
+const topics = [
+    {name: "Tiktok",color:"#01ad62ff"},
+    {name: "AutoEntrepreneur",color:"#e2ba1cff"}
+]
 
 export default function Home() {
     return (
@@ -55,6 +61,7 @@ export default function Home() {
                     />
                 </div>
             </section>
+            <ProjectCard title={"Wawedo"} description={"Création de projet communautaire"} topics={topics}/>
         </main>
     )
 }
