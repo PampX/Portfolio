@@ -23,6 +23,14 @@ const topics = [
     {name: "Tiktok",color:"#01ad62ff"},
     {name: "AutoEntrepreneur",color:"#e2ba1cff"}
 ]
+const topics2 = [
+    {name: "Unity",color:"#0185adff"},
+    {name: "AutoEntrepreneur",color:"#e2ba1cff"}
+]
+const topics3 = [
+    {name: "Python",color:"#ad015dff"},
+    {name: "IA",color:"#27027bff"}
+]
 
 export default function Home() {
     return (
@@ -61,7 +69,11 @@ export default function Home() {
                     />
                 </div>
             </section>
+            <div className='homePC'>
             <ProjectCard title={"Wawedo"} description={"Création de projet communautaire"} topics={topics}/>
+            <ProjectCard title={"Unknown"} description={"?"} topics={topics2}/>
+            <ProjectCard title={"PinkCC"} description={"Challenge Machine Learning cancer ovarien"} topics={topics3}/>
+            </div>
         </main>
     )
 }
