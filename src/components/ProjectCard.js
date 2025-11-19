@@ -17,7 +17,6 @@ export default function ProjectCard({title, description, picture, link, topics =
                     </div>
                 ))}
             </div>
-
         </div>
     )
 }
