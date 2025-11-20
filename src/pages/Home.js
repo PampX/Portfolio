@@ -3,33 +3,40 @@ import ProjectCard from '../components/ProjectCard';
 import RotatingText from '../components/RotatingText'
 import '../styles/Home.css'
 
+import pamplemousse from '../media/pamplemousse.jpg'
+import wawedo from '../media/wawedo.png'
+import pinkcc from '../media/pinkcc.png'
+
+
 const rotatingTexts = [
-  'IA',
-  'Machine Learning',
-  "Deep Learning",
-  "Reinforcement Learning",
-  'Développement',
-  'Programmation',
-  'Lead Developer',
-  '3D',
-  'Game Development',
-  'Gaming',
-  'Freelance', 
-  "<3", 
-  "<TB/>"
+    'IA',
+    'Machine Learning',
+    "Deep Learning",
+    "Reinforcement Learning",
+    'Développement',
+    'Programmation',
+    'Lead Developer',
+    '3D',
+    'Game Development',
+    'Gaming',
+    'Freelance',
+    "<3",
+    "<TB/>"
 ];
 
+// images
+
 const topics = [
-    {name: "Tiktok",color:"#01ad62ff"},
-    {name: "AutoEntrepreneur",color:"#e2ba1cff"}
+    { name: "Tiktok", color: "#01ad62ff" },
+    { name: "AutoEntrepreneur", color: "#e2ba1cff" }
 ]
 const topics2 = [
-    {name: "Unity",color:"#0185adff"},
-    {name: "AutoEntrepreneur",color:"#e2ba1cff"}
+    { name: "Unity", color: "#0185adff" },
+    { name: "AutoEntrepreneur", color: "#e2ba1cff" }
 ]
 const topics3 = [
-    {name: "Python",color:"#ad015dff"},
-    {name: "IA",color:"#27027bff"}
+    { name: "Python", color: "#ad015dff" },
+    { name: "IA", color: "#27027bff" }
 ]
 
 export default function Home() {
@@ -70,9 +77,12 @@ export default function Home() {
                 </div>
             </section>
             <div className='homePC'>
-            <ProjectCard title={"Wawedo"} description={"Création de projet communautaire"} topics={topics}/>
-            <ProjectCard title={"Unknown"} description={"?"} topics={topics2}/>
-            <ProjectCard title={"PinkCC"} description={"Challenge Machine Learning cancer ovarien"} topics={topics3}/>
+                <ProjectCard title={"Wawedo"} picture={wawedo} description={"Création de projet communautaire"} topics={topics} />
+                <ProjectCard title={"Unknown"} picture={pamplemousse} description={"?"} topics={topics2} />
+                <ProjectCard title={"PinkCC"} picture={pinkcc} description={"Challenge Machine Learning cancer ovarien"} topics={topics3} />
+                <ProjectCard title={"Wawedo"} picture={wawedo} description={"Création de projet communautaire"} topics={topics} />
+                <ProjectCard title={"Unknown"} picture={pamplemousse} description={"?"} topics={topics2} />
+                <ProjectCard title={"PinkCC"} picture={pinkcc} description={"Challenge Machine Learning cancer ovarien"} topics={topics3} />
             </div>
         </main>
     )
