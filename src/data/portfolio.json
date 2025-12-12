@@ -98,19 +98,19 @@
             ]
         },
         "unity-learn-course": {
-            "title": "Unity Learn Course",
+            "title": "Unity Learn",
             "tags": [
                 "course","vg"
             ]
         },
         "reinforcement-learning-course": {
-            "title": "Reinforcement Learning Course",
+            "title": "Reinforcement Learning",
             "tags": [
                 "course","ia"
             ]
         },
         "fun-mooc-machine-learning": {
-            "title": "Machine Learning Course",
+            "title": "Machine Learning",
             "tags": ["course","ia"]
         },
         "hector-influenceur": {
@@ -122,6 +122,22 @@
         "grimoire": {
             "title": "Grimoire",
             "tags": ["app","autoentrepreneur"]
+        },
+        "tlc": {
+            "title": "Trouve le code",
+            "tags": ["web","vg"]
+        },
+        "hexa": {
+            "title": "Hexa",
+            "tags": ["web","vg"]
+        },
+        "p2p": {
+            "title": "Pomme2pain",
+            "tags": ["web","vg"]
+        },
+        "r3f": {
+            "title": "ThreeJs Journey",
+            "tags": ["web","course","blender"]
         }
     }
 }
