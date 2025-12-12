@@ -1,7 +1,7 @@
 {
     "tags": {
-        "tiktok": {
-            "label": "TikTok",
+        "course": {
+            "label": "Course",
             "color": "#01ad62ff"
         },
         "autoentrepreneur": {
@@ -10,15 +10,35 @@
         },
         "unity": {
             "label": "Unity",
-            "color": "#0185adff"
-        },
-        "python": {
-            "label": "Python",
-            "color": "#ad015dff"
+            "color": "#cfc2b2"
         },
         "ia": {
             "label": "IA",
-            "color": "#27027bff"
+            "color": "#78f6ff"
+        },
+        "blender": {
+            "label": "Blender",
+            "color": "#f5971d"
+        },
+        "tiktok": {
+            "label": "Tiktok",
+            "color": "#78f6ff"
+        },
+        "insta": {
+            "label": "Instagram",
+            "color": "#e63ed8"
+        },
+        "app": {
+            "label": "App",
+            "color": "#e63e5d"
+        },
+        "web": {
+            "label": "Web",
+            "color": "#5f3ee6"
+        },
+        "vg": {
+            "label": "VideoGame",
+            "color": "#67d672"
         }
     },
     "projects": {
@@ -32,63 +52,76 @@
         "unknown": {
             "title": "Unknown",
             "tags": [
-                "unity",
-                "autoentrepreneur"
+                "unity","autoentrepreneur","vg"
             ]
         },
         "pinkcc": {
             "title": "PinkCC",
             "tags": [
-                "python",
-                "ia",
-                "autoentrepreneur",
-                "tiktok",
-                "unity"
+                "ia"
             ]
         },
         "pxl": {
             "title": "PXL",
-            "tags": []
+            "tags": [
+                "autoentrepreneur","web"
+            ]
         },
         "duaphin": {
             "title": "Duaphin",
-            "tags": []
+            "tags": [
+                "autoentrepreneur","web"
+            ]
         },
         "plush-n-peek": {
             "title": "Plush 'n' Peek",
-            "tags": []
+            "tags": [
+                "unity","vg"
+            ]
         },
         "mind7": {
             "title": "Mind7",
-            "tags": []
+            "tags": [
+                "autoentrepreneur","app"
+            ]
         },
         "decblender": {
             "title": "DecBlender",
-            "tags": []
+            "tags": [
+                "blender","insta"
+            ]
         },
         "octoblender": {
             "title": "OctoBlender",
-            "tags": []
+            "tags": [
+                "blender","insta"
+            ]
         },
         "unity-learn-course": {
             "title": "Unity Learn Course",
-            "tags": []
+            "tags": [
+                "course","vg"
+            ]
         },
         "reinforcement-learning-course": {
             "title": "Reinforcement Learning Course",
-            "tags": []
+            "tags": [
+                "course","ia"
+            ]
         },
         "fun-mooc-machine-learning": {
             "title": "Machine Learning Course",
-            "tags": []
+            "tags": ["course","ia"]
         },
         "hector-influenceur": {
             "title": "Hector l'influenceur",
-            "tags": []
+            "tags": [
+                "insta"
+            ]
         },
         "grimoire": {
             "title": "Grimoire",
-            "tags": []
+            "tags": ["app","autoentrepreneur"]
         }
     }
 }
