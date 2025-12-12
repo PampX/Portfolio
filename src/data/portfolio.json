@@ -40,8 +40,55 @@
             "title": "PinkCC",
             "tags": [
                 "python",
-                "ia"
+                "ia",
+                "autoentrepreneur",
+                "tiktok",
+                "unity"
             ]
+        },
+        "pxl": {
+            "title": "PXL",
+            "tags": []
+        },
+        "duaphin": {
+            "title": "Duaphin",
+            "tags": []
+        },
+        "plush-n-peek": {
+            "title": "Plush 'n' Peek",
+            "tags": []
+        },
+        "mind7": {
+            "title": "Mind7",
+            "tags": []
+        },
+        "decblender": {
+            "title": "DecBlender",
+            "tags": []
+        },
+        "octoblender": {
+            "title": "OctoBlender",
+            "tags": []
+        },
+        "unity-learn-course": {
+            "title": "Unity Learn Course",
+            "tags": []
+        },
+        "reinforcement-learning-course": {
+            "title": "Reinforcement Learning Course",
+            "tags": []
+        },
+        "fun-mooc-machine-learning": {
+            "title": "Machine Learning Course",
+            "tags": []
+        },
+        "hector-influenceur": {
+            "title": "Hector l'influenceur",
+            "tags": []
+        },
+        "grimoire": {
+            "title": "Grimoire",
+            "tags": []
         }
     }
 }

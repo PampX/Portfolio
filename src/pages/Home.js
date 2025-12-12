@@ -20,18 +20,6 @@ const rotatingTexts = [
     "<TB/>"
 ];
 
-const topics = [
-    { name: "Tiktok", color: "#01ad62ff" },
-    { name: "AutoEntrepreneur", color: "#e2ba1cff" }
-]
-const topics2 = [
-    { name: "Unity", color: "#0185adff" },
-    { name: "AutoEntrepreneur", color: "#e2ba1cff" }
-]
-const topics3 = [
-    { name: "Python", color: "#ad015dff" },
-    { name: "IA", color: "#27027bff" }
-]
 
 export default function Home() {
     const { projects, tags } = portfolio
@@ -72,7 +60,7 @@ export default function Home() {
                 </div>
             </section>
             <div className='homePC'>
-                {Object.entries(projects).map(([id, project]) => {
+                {Object.entries(projects).slice(0,3).map(([id, project]) => {
                     const projectTopics = project.tags.map(tagId => ({
                         name: tags[tagId].label,
                         color: tags[tagId].color

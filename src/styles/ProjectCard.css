@@ -1,7 +1,6 @@
 .PCcontainer {
     margin: 5px;
     padding: 5px;
-    /* Taille responsive */
     flex: 1 1 280px;
     max-width: 300px;
     min-width: 260px;
@@ -14,8 +13,26 @@
     -webkit-backdrop-filter: blur(6.8px);
     border: 1px solid rgba(255, 255, 255, 0.23);
 
-
+    transition: 
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+    cursor: pointer;
 }
+.PCcontainer:hover .PCtitle {
+    opacity: 0.85;
+}
+
+
+.PCcontainer:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.25),
+    0 0 20px rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #B19EEF;
+}
+
 .PCtitleAndPicture{
     display: flex;
     align-items: center;
@@ -24,10 +41,23 @@
 
 .PCpicture {}
 
-.PCtitle {}
+.PCtitle {
+    text-align: center;
+    font-size: 24px;
+    margin: 10px;
+}
 
 .PCdescription {}
 
-.PCtopics {}
+.PCtopics {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
-.PCtopic {}
+.PCtopic {
+    border-radius: 10px;
+    padding: 5px;
+    width: fit-content;
+}

@@ -33,6 +33,7 @@ button {
     font-weight: bold;
     transition: color 200ms ease, transform 160ms cubic-bezier(.2,.8,.2,1);
     will-change: color, transform;
+    cursor: pointer;
 }
     
 .nav_button:hover{
