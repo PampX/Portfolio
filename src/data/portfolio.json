@@ -1,0 +1,47 @@
+{
+    "tags": {
+        "tiktok": {
+            "label": "TikTok",
+            "color": "#01ad62ff"
+        },
+        "autoentrepreneur": {
+            "label": "AutoEntrepreneur",
+            "color": "#e2ba1cff"
+        },
+        "unity": {
+            "label": "Unity",
+            "color": "#0185adff"
+        },
+        "python": {
+            "label": "Python",
+            "color": "#ad015dff"
+        },
+        "ia": {
+            "label": "IA",
+            "color": "#27027bff"
+        }
+    },
+    "projects": {
+        "wawedo": {
+            "title": "Wawedo",
+            "tags": [
+                "tiktok",
+                "autoentrepreneur"
+            ]
+        },
+        "unknown": {
+            "title": "Unknown",
+            "tags": [
+                "unity",
+                "autoentrepreneur"
+            ]
+        },
+        "pinkcc": {
+            "title": "PinkCC",
+            "tags": [
+                "python",
+                "ia"
+            ]
+        }
+    }
+}
