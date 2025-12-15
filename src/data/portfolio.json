@@ -138,6 +138,18 @@
         "r3f": {
             "title": "ThreeJs Journey",
             "tags": ["web","course","blender"]
+        },
+        "chauddevant": {
+            "title": "Chaud Devant !",
+            "tags": [
+                "unity","vg"
+            ]
+        },
+        "samaritain":{
+            "title": "samaritain", 
+            "tags":[
+                "app","web","autoentrepreneur"
+            ]
         }
     }
 }
