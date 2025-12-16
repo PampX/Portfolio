@@ -12,7 +12,7 @@
     backdrop-filter: blur(6.8px);
     -webkit-backdrop-filter: blur(6.8px);
     border: 1px solid rgba(255, 255, 255, 0.23);
-
+    height: 110px;
     transition: 
         transform 0.25s ease,
         box-shadow 0.25s ease,

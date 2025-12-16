@@ -52,7 +52,9 @@
         "unknown": {
             "title": "Unknown",
             "tags": [
-                "unity","autoentrepreneur","vg"
+                "unity",
+                "autoentrepreneur",
+                "vg"
             ]
         },
         "pinkcc": {
@@ -64,54 +66,65 @@
         "pxl": {
             "title": "PXL",
             "tags": [
-                "autoentrepreneur","web"
+                "autoentrepreneur",
+                "web"
             ]
         },
         "duaphin": {
             "title": "Duaphin",
             "tags": [
-                "autoentrepreneur","web"
+                "autoentrepreneur",
+                "web"
             ]
         },
         "plush-n-peek": {
             "title": "Plush 'n' Peek",
             "tags": [
-                "unity","vg"
+                "unity",
+                "vg"
             ]
         },
         "mind7": {
             "title": "Mind7",
             "tags": [
-                "autoentrepreneur","app"
+                "autoentrepreneur",
+                "app"
             ]
         },
         "decblender": {
             "title": "DecBlender",
             "tags": [
-                "blender","insta"
+                "blender",
+                "insta"
             ]
         },
         "octoblender": {
             "title": "OctoBlender",
             "tags": [
-                "blender","insta"
+                "blender",
+                "insta"
             ]
         },
         "unity-learn-course": {
             "title": "Unity Learn",
             "tags": [
-                "course","vg"
+                "course",
+                "vg"
             ]
         },
         "reinforcement-learning-course": {
             "title": "Reinforcement Learning",
             "tags": [
-                "course","ia"
+                "course",
+                "ia"
             ]
         },
         "fun-mooc-machine-learning": {
             "title": "Machine Learning",
-            "tags": ["course","ia"]
+            "tags": [
+                "course",
+                "ia"
+            ]
         },
         "hector-influenceur": {
             "title": "Hector l'influenceur",
@@ -121,34 +134,110 @@
         },
         "grimoire": {
             "title": "Grimoire",
-            "tags": ["app","autoentrepreneur"]
+            "tags": [
+                "app",
+                "autoentrepreneur"
+            ]
         },
         "tlc": {
             "title": "Trouve le code",
-            "tags": ["web","vg"]
+            "tags": [
+                "web",
+                "vg"
+            ]
         },
         "hexa": {
             "title": "Hexa",
-            "tags": ["web","vg"]
+            "tags": [
+                "web",
+                "vg"
+            ]
         },
         "p2p": {
             "title": "Pomme2pain",
-            "tags": ["web","vg"]
+            "tags": [
+                "web",
+                "vg"
+            ]
         },
         "r3f": {
             "title": "ThreeJs Journey",
-            "tags": ["web","course","blender"]
+            "tags": [
+                "web",
+                "course",
+                "blender"
+            ]
         },
         "chauddevant": {
             "title": "Chaud Devant !",
             "tags": [
-                "unity","vg"
+                "unity",
+                "vg"
             ]
         },
-        "samaritain":{
-            "title": "samaritain", 
-            "tags":[
-                "app","web","autoentrepreneur"
+        "samaritain": {
+            "title": "Samaritain",
+            "tags": [
+                "app",
+                "web",
+                "autoentrepreneur"
+            ]
+        },
+        "safyr": {
+            "title": "SAFYR",
+            "tagline": "Plateforme web + app pour gestion terrain",
+            "date": "2025-11",
+            "status": "in_progress",
+            "description": "Projet test pour valider le rendu de la page projet : une plateforme type dashboard (glassmorphism) avec gestion de données, modules, et analytics. L’objectif est de vérifier l’affichage des sections, des liens et de la galerie média.",
+            "tags": [
+                "app",
+                "web",
+                "autoentrepreneur"
+            ],
+            "links": [
+                {
+                    "label": "Live",
+                    "url": "https://example.com"
+                },
+                {
+                    "label": "GitHub",
+                    "url": "https://github.com/username/repo"
+                },
+                {
+                    "label": "Figma",
+                    "url": "https://figma.com/file/xxxx"
+                }
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "/projects/safyr/cover.png",
+                    "alt": "Dashboard SAFYR"
+                },
+                {
+                    "type": "image",
+                    "src": "/projects/safyr/screen-1.png",
+                    "alt": "Module analytics"
+                },
+                {
+                    "type": "video",
+                    "src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                    "alt": "Demo vidéo"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Contexte",
+                    "content": "Créé pour tester une UI de dashboard scientifique : cartes modulaires, filtres, tags, et pages projet dynamiques."
+                },
+                {
+                    "title": "Ce que j’ai fait",
+                    "content": "Structuration des données via portfolio.json, routing /work/:id, UI cards, recherche + filtres, et gabarit de page projet."
+                },
+                {
+                    "title": "Tech",
+                    "content": "React + Router, CSS glassmorphism, data-driven rendering via JSON."
+                }
             ]
         }
     }

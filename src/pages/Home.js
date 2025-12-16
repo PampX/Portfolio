@@ -70,6 +70,7 @@ export default function Home() {
                             key={id}
                             title={project.title}
                             topics={projectTopics}
+                            link={"/work/"+id}
                         />
                     );
                 })}

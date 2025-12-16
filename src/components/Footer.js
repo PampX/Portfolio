@@ -21,6 +21,7 @@ export default function Footer() {
                 </div>
 
                 <div className="footer-right">
+                    <h2>{"<TB/>"}</h2>
                     <p>© {new Date().getFullYear()}</p>
                 </div>
             </div>

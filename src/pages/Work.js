@@ -114,6 +114,7 @@ export default function Work() {
                             key={id}
                             title={project.title}
                             topics={projectTopics}
+                            link={"/work/"+id}
                         />
                     );
                 })}
