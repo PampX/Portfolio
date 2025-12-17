@@ -13,7 +13,6 @@ const STATUS = {
 
 function formatDate(dateStr) {
     if (!dateStr) return null;
-    // "2025-12" -> "Déc. 2025" (simple)
     const [y, m] = dateStr.split("-");
     const month = [
         "Jan.", "Fév.", "Mars", "Avr.", "Mai", "Juin",
@@ -69,7 +68,6 @@ export default function ProjectPage() {
                 />
             </section>
             <div className="project-shell">
-                {/* Header */}
                 <header className="pp-header card">
                     <div className="pp-header__left">
                         <div className="pp-kicker">Project</div>
@@ -111,7 +109,6 @@ export default function ProjectPage() {
                             ))}
                         </div>
 
-                        {/* petit résumé méta optionnel */}
                         <div className="pp-meta">
                             {project.role && (
                                 <div className="pp-meta__row">
@@ -129,9 +126,7 @@ export default function ProjectPage() {
                     </div>
                 </header>
 
-                {/* Content grid */}
                 <div className="pp-grid">
-                    {/* Description */}
                     <section className="card pp-section">
                         <h2 className="pp-h2">Contexte & Description</h2>
                         <p className="pp-text">{project.description || "—"}</p>
@@ -148,7 +143,6 @@ export default function ProjectPage() {
                         )}
                     </section>
 
-                    {/* Gallery */}
                     <section className="card pp-section">
                         <div className="pp-section__head">
                             <h2 className="pp-h2">Galerie</h2>

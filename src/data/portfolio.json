@@ -4,8 +4,8 @@
             "label": "Course",
             "color": "#01ad62ff"
         },
-        "autoentrepreneur": {
-            "label": "AutoEntrepreneur",
+        "entrepreneur": {
+            "label": "Entrepreneur",
             "color": "#e2ba1cff"
         },
         "unity": {
@@ -44,37 +44,167 @@
     "projects": {
         "wawedo": {
             "title": "Wawedo",
+            "tagline": "Communauté pour lancer des projets innovants",
+            "date": "2025-09",
+            "status": "in_progress",
+            "description": "Wawedo est un projet lancé sur TikTok pour rassembler des personnes motivées et créatives, afin de former une communauté capable de participer à des idées et de lancer des projets innovants. J’ai créé un compte TikTok (une dizaine de vidéos) ainsi qu’un Discord pour centraliser la communauté. Une série de vidéos intitulée « Why not » a été produite pour présenter des idées parfois folles et questionner leur faisabilité, avec un message central : pourquoi ne pas les réaliser ? L’objectif était d’amener les gens à prendre conscience que leurs idées peuvent devenir des projets concrets et intéressants.",
             "tags": [
                 "tiktok",
-                "autoentrepreneur"
+                "entrepreneur"
+            ],
+            "sections": [
+                {
+                    "title": "Ce que j’ai fait",
+                    "content": "Création du concept, lancement du compte TikTok, production d’une dizaine de vidéos, création et structuration du Discord."
+                },
+                {
+                    "title": "Tech / Outils",
+                    "content": "TikTok, Discord, création de contenu, community building."
+                }
+            ],
+            "links": [
+                {
+                    "label": "Tiktok",
+                    "url": "https://www.tiktok.com/@wawedo_off"
+                },
+                {
+                    "label": "Discord",
+                    "url": "https://discord.gg/RjJh6sFJtd"
+                }
+            ],
+            "media": [
+                {
+                    "type": "video",
+                    "src": "/videos/wawedo.mp4",
+                    "alt": "Why not 1"
+                }
             ]
         },
         "unknown": {
             "title": "Unknown",
+            "tagline": "Jeu vidéo secret en cours de développement",
+            "status": "in_progress",
+            "date": "2025-06",
+            "description": "Unknown est un projet de jeu vidéo actuellement en cours de développement. Le projet reste volontairement discret pour le moment, mais l’objectif est de construire une expérience originale, avec une forte direction créative et une progression pensée sur le long terme.",
             "tags": [
                 "unity",
-                "autoentrepreneur",
+                "entrepreneur",
                 "vg"
+            ],
+            "sections": [
+                {
+                    "title": "Ce que j’ai fait",
+                    "content": "Game design, prototypage, développement en cours, mise en place de la structure projet et des bases de production."
+                },
+                {
+                    "title": "Tech / Outils",
+                    "content": "Unity, 3D, game dev (détails volontairement limités pour l’instant)."
+                }
             ]
         },
         "pinkcc": {
-            "title": "PinkCC",
+            "title": "PINKCC Challenge 2025",
+            "tagline": "IA & imagerie médicale pour améliorer le diagnostic du cancer de l’ovaire",
+            "date": "2025-01",
+            "status": "done",
+            "description": "Participation au PINKCC Challenge 2025, un challenge scientifique international visant à mettre l’intelligence artificielle au service de la santé des femmes. Pendant 10 semaines, les équipes ont travaillé sur des modèles de segmentation tumorale à partir d’images médicales, afin d’améliorer le diagnostic du cancer de l’ovaire. La finale s’est tenue à l’ICM (Institut du Cancer de Montpellier), dans une ambiance à la fois très exigeante scientifiquement et humaine.",
             "tags": [
                 "ia"
+            ],
+            "links": [
+                {
+                    "label": "GitHub",
+                    "url": "https://github.com/OIIA-OIIA/PinkCC"
+                },
+                {
+                    "label": "ICM",
+                    "url": "https://montpellier-cancer.com/pinkcc-challenge-2025/"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Ce que j’ai fait",
+                    "content": "Participation active au développement du pipeline de segmentation d’images médicales au sein de l’équipe OIIA OIIA. Travail sur la préparation des données (lecture de volumes .nii.gz, extraction de coupes 2D), implémentation et expérimentation d’un modèle U-Net pour la segmentation tumorale, réglage des paramètres d’entraînement et analyse qualitative des résultats via la visualisation des prédictions. Contribution aux itérations du modèle et à la préparation du rendu final présenté lors de la finale du challenge."
+                },
+                {
+                    "title": "Approche & pipeline IA",
+                    "content": "Mise en place d’un pipeline complet de segmentation supervisée : chargement des données avec nibabel, création d’un Dataset PyTorch personnalisé, normalisation et transformations des images, entraînement d’un modèle U-Net avec fonction de perte Dice Loss pour gérer le déséquilibre des classes, puis visualisation des prédictions (image, masque réel, masque prédit) afin d’évaluer qualitativement les performances."
+                },
+                {
+                    "title": "Tech / Outils",
+                    "content": "Python, PyTorch, U-Net, Dice Loss, imagerie médicale, segmentation d’images, fichiers .nii.gz, nibabel, data science, travail collaboratif en équipe."
+                },
+                {
+                    "title": "Perspectives",
+                    "content": "Pistes d’amélioration identifiées : ajout d’une phase de validation quantitative (Dice score, précision, rappel), entraînement sur un plus grand volume de données et sur GPU, amélioration du modèle (U-Net plus profond, data augmentation), et prise en compte de volumes 3D complets pour une segmentation plus fine."
+                }
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "/images/pinkcc.jpg",
+                    "alt": "Pink CC"
+                }
             ]
         },
         "pxl": {
             "title": "PXL",
+            "tagline": "Ateliers et parcours pour rendre l’informatique accessible",
+            "status": "paused",
+            "date": "2025-06",
+            "description": "PXL est une initiative pensée pour transmettre le savoir et rendre l’informatique plus accessible à des publics variés : jeunes, filles/femmes, personnes en reconversion, et personnes âgées. L’idée est de proposer des ateliers d’initiation, des cours plus poussés, et des parcours intensifs sur plusieurs mois — jusqu’à permettre à des personnes partant de zéro d’acquérir un niveau suffisant pour viser une poursuite d’études (ex : intégration d’un master) ou une montée en compétences solide.",
             "tags": [
-                "autoentrepreneur",
-                "web"
+                "entrepreneur",
+                "web",
+                "ia",
+                "vg"
+            ],
+            "links": [
+                {
+                    "label": "website",
+                    "url": "https://nuagecloud43.wixsite.com/p-x-l"
+                },
+                {
+                    "label": "website²",
+                    "url": "https://pxl-rho.vercel.app/"
+                },
+                {
+                    "label": "Présentation",
+                    "url": "https://gamma.app/docs/Ateliers-Numeriques-Pour-Tous-a0pykuxc0ruenmc?mode=doc"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Contexte",
+                    "content": "PXL est né de la volonté de démocratiser l’accès à l’informatique, au jeu vidéo et à l’intelligence artificielle auprès de publics variés (jeunes, femmes, personnes en reconversion ou seniors), via une approche pédagogique progressive, inclusive et concrète."
+                },
+                {
+                    "title": "Ateliers proposés",
+                    "content": "Le projet PXL s’articulait autour d’ateliers pratiques et accessibles, pensés pour partir de zéro et apprendre en faisant :\n\n• Logiciel & impression 3D : découverte de Blender et impression de créations via imprimante 3D.\n• Intelligence Artificielle & Machine Learning : compréhension des bases de l’IA à travers un exemple ludique (type Flappy Bird) pour visualiser les mécanismes d’apprentissage.\n• Deep Learning : introduction aux réseaux de neurones et démonstration de la reconnaissance de chiffres par une IA.\n• Python : apprentissage des bases de la programmation et création d’un petit jeu.\n• Web (React) : création des premières pages web interactives.\n• Application mobile (React Native) : conception et développement d’une première application mobile."
+                },
+                {
+                    "title": "Ce que j’ai fait",
+                    "content": "Conception du projet pédagogique, définition des ateliers et de leur progression, réflexion sur les parcours courts et longs (initiation, approfondissement, parcours intensifs), ainsi que sur les objectifs de montée en compétences et d’orientation possible vers des formations avancées."
+                },
+                {
+                    "title": "Tech / Outils",
+                    "content": "Python, React, React Native, Blender, impression 3D, bases en IA et deep learning, pédagogie et vulgarisation technique."
+                }
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "/images/pxl.png",
+                    "alt": "PXL"
+                }
             ]
         },
         "duaphin": {
             "title": "Duaphin",
             "tags": [
-                "autoentrepreneur",
-                "web"
+                "entrepreneur",
+                "web", 
+                "blender"
             ]
         },
         "plush-n-peek": {
@@ -87,7 +217,7 @@
         "mind7": {
             "title": "Mind7",
             "tags": [
-                "autoentrepreneur",
+                "entrepreneur",
                 "app"
             ]
         },
@@ -136,7 +266,7 @@
             "title": "Grimoire",
             "tags": [
                 "app",
-                "autoentrepreneur"
+                "entrepreneur"
             ]
         },
         "tlc": {
@@ -180,7 +310,7 @@
             "tags": [
                 "app",
                 "web",
-                "autoentrepreneur"
+                "entrepreneur"
             ]
         },
         "safyr": {
@@ -192,7 +322,7 @@
             "tags": [
                 "app",
                 "web",
-                "autoentrepreneur"
+                "entrepreneur"
             ],
             "links": [
                 {
