@@ -201,24 +201,105 @@
         },
         "duaphin": {
             "title": "Duaphin",
+            "tagline": "Collection de modèles 3D interactifs avec système de rareté",
+            "date": "2021-06",
+            "status": "paused",
+            "description": "Duaphin est un projet imaginé dès 2021, à la découverte de Three.js puis approfondi plus récemment avec React Three Fiber. L’idée était de créer une application web permettant de collectionner des modèles 3D originaux que je réalise, avec un système de rareté et de mise en valeur interactive.",
             "tags": [
                 "entrepreneur",
-                "web", 
+                "web",
                 "blender"
+            ],
+            "links": [
+                {
+                    "label": "CDA 2023",
+                    "url": "/documents/CDA_2023.pdf"
+                }
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "/images/duaphin.png",
+                    "alt": "Duaphin"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Ce que j’ai fait",
+                    "content": "Conception de l’idée, réflexion sur l’expérience utilisateur, exploration de Three.js et React Three Fiber, création de modèles 3D avec Blender."
+                },
+                {
+                    "title": "Tech / Outils",
+                    "content": "Three.js, React Three Fiber, Blender, web 3D."
+                }
             ]
         },
         "plush-n-peek": {
             "title": "Plush 'n' Peek",
+            "tagline": "Jeu coopératif asymétrique basé sur la communication",
+            "date": "2023-11",
+            "status": "stopped",
+            "description": "Plush 'n' Peek est un projet de jeu vidéo développé dans le cadre du master à Epitech. Pendant un an et demi, une équipe passée de 3 à 9 personnes a travaillé sur un jeu coopératif où deux joueurs incarnent des peluches dans une usine. Suite à une défaillance visuelle, chaque joueur ne perçoit pas les mêmes éléments de l’environnement, ce qui les oblige à communiquer pour résoudre des énigmes, réussir des challenges et vaincre des boss.",
             "tags": [
                 "unity",
                 "vg"
+            ],
+            "links": [
+                {
+                    "label": "Trailer",
+                    "url": "https://www.youtube.com/watch?v=34b7SQuMP2A"
+                },
+                {
+                    "label": "Démo",
+                    "url": "https://youtu.be/mfvZHeJvfzE"
+                }
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "/images/pnp.png",
+                    "alt": "Plush 'n' Peek cover"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Ce que j’ai fait",
+                    "content": "Participation au game design, au développement Unity, à la conception des mécaniques coopératives et à la coordination au sein d’une équipe de grande taille."
+                },
+                {
+                    "title": "Tech / Outils",
+                    "content": "Unity, C#, game design, travail en équipe, gestion de projet."
+                }
             ]
         },
         "mind7": {
             "title": "Mind7",
+            "tagline": "Application mobile de suivi émotionnel et d’habitudes positives",
+            "date": "2025-03",
+            "status": "in_progress",
+            "description": "Mind7 est une application mobile dédiée au suivi des émotions et des habitudes, avec pour objectif d’aider les utilisateurs à améliorer leur santé mentale et leur rapport au quotidien. Mind7 propose une approche plus douce et ludique du bien-être mental et du développement personnel. Le projet vise à encourager une vision plus positive, à valoriser les petites victoires et à accompagner la mise en place d’habitudes saines sur le long terme.",
             "tags": [
                 "entrepreneur",
                 "app"
+            ],
+            "links": [
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "/images/mind7.png",
+                    "alt": "Mind7 app cover"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Ce que j’ai fait",
+                    "content": "Définition du concept, réflexion UX/UI, structuration des fonctionnalités (mood tracking, habitudes, progression), et prototypage de l’application."
+                },
+                {
+                    "title": "Tech / Outils",
+                    "content": "Application mobile, UX/UI, logique produit, outils à préciser selon l’implémentation finale."
+                }
             ]
         },
         "decblender": {
@@ -264,9 +345,36 @@
         },
         "grimoire": {
             "title": "Grimoire",
+            "tagline": "Catalogue digital connecté aux outils métiers",
+            "date": "2024-05",
+            "status": "stopped",
+            "description": "Grimoire est une application pensée pour aider les entreprises à présenter leurs produits et services à travers un book digital interactif. Connectée à un ERP, l’application permettait également d’accéder à des fonctionnalités métier comme la consultation des stocks, la prise de commandes ou l’accompagnement des équipes commerciales sur le terrain.",
             "tags": [
                 "app",
                 "entrepreneur"
+            ],
+            "links": [
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "/images/grimoire.png",
+                    "alt": "Grimoire cover"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Contexte",
+                    "content": "Projet orienté B2B visant à moderniser la présentation produit et à faciliter le travail des équipes commerciales."
+                },
+                {
+                    "title": "Ce que j’ai fait",
+                    "content": "Conception du produit, définition des fonctionnalités clés, réflexion sur l’intégration ERP et l’expérience utilisateur."
+                },
+                {
+                    "title": "Tech / Outils",
+                    "content": "Application métier, UX produit, intégration ERP (conceptuelle)."
+                }
             ]
         },
         "tlc": {
