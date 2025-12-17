@@ -59,7 +59,7 @@ export default function Home() {
                     />
                 </div>
             </section>
-            <div className='homePC'>
+            {/* <div className='homePC'>
                 {Object.entries(projects).slice(0,3).map(([id, project]) => {
                     const projectTopics = project.tags.map(tagId => ({
                         name: tags[tagId].label,
@@ -74,7 +74,7 @@ export default function Home() {
                         />
                     );
                 })}
-            </div>
+            </div> */}
         </main>
     )
 }
