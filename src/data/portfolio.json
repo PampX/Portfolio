@@ -304,37 +304,217 @@
         },
         "decblender": {
             "title": "DecBlender",
+            "tagline": "Calendrier de créations 3D jusqu’à Noël",
+            "date": "2024-12",
+            "status": "done",
+            "description": "DecBlender est un projet créatif similaire à OctoBlender, mené durant le mois de décembre jusqu’à Noël. Chaque jour, un nouveau rendu 3D était publié sur Instagram autour d’un thème imposé. Le projet mettait l’accent sur la régularité, l’imagination et l’exploration de styles visuels variés dans un contexte festif.",
             "tags": [
                 "blender",
                 "insta"
+            ],
+            "links": [
+                {
+                    "label": "Instagram",
+                    "url": "https://www.instagram.com/p/DEBQOxogTWW/"
+                }
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "/images/decblender.png",
+                    "alt": "DecBlender exemples"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Contexte",
+                    "content": "Déclinaison du concept OctoBlender dans un contexte de calendrier de l’avent, avec une création 3D quotidienne jusqu’à Noël."
+                },
+                {
+                    "title": "Ce que j’ai fait",
+                    "content": "Production quotidienne de rendus 3D sur thème imposé, exploration de styles, gestion du rythme de publication et diffusion sur Instagram."
+                },
+                {
+                    "title": "Tech / Outils",
+                    "content": "Blender, création 3D, rendu, lighting, créativité, constance de production."
+                }
             ]
         },
         "octoblender": {
             "title": "OctoBlender",
+            "tagline": "Challenge créatif 3D quotidien sur Instagram",
+            "date": "2024-10",
+            "status": "done",
+            "description": "OctoBlender est un challenge créatif mené sur Instagram durant tout le mois d’octobre. Chaque jour, je réalisais et publiais un rendu 3D basé sur un thème imposé. L’objectif était de pratiquer quotidiennement la 3D, de stimuler la créativité et de maintenir une discipline de production régulière.",
             "tags": [
                 "blender",
                 "insta"
+            ],
+            "links": [
+                {
+                    "label": "Instagram",
+                    "url": "https://www.instagram.com/p/DBzD3ICiGrK/?img_index=1"
+                }
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "/images/octoblender.png",
+                    "alt": "OctoBlender exemples"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Contexte",
+                    "content": "Challenge artistique inspiré des formats type Inktober, appliqué à la 3D afin de produire un rendu par jour sur un thème défini."
+                },
+                {
+                    "title": "Ce que j’ai fait",
+                    "content": "Création quotidienne de scènes 3D, modélisation, éclairage, rendu et publication sur Instagram, en respectant un thème imposé chaque jour."
+                },
+                {
+                    "title": "Tech / Outils",
+                    "content": "Blender, modélisation 3D, lighting, rendu, créativité, publication de contenu."
+                }
             ]
         },
-        "unity-learn-course": {
+        "unity-learn": {
             "title": "Unity Learn",
+            "tagline": "Parcours de formation Unity (Game Dev)",
+            "date": "2024-2025",
+            "status": "in_progress",
+            "description": "Unity Learn est la plateforme officielle de formation Unity dédiée au game development. J’y ai suivi plusieurs parcours structurants afin de consolider mes bases en développement de jeux vidéo, programmation et conception d’expériences interactives. Les parcours Unity Essentials, Junior Programmer et Creative Core ont été complétés. Les modules VR et AR restent à explorer.",
             "tags": [
                 "course",
                 "vg"
+            ],
+            "links": [
+                {
+                    "label": "Unity Learn",
+                    "url": "https://learn.unity.com/pathways"
+                },
+                {
+                    "label": "My Games",
+                    "url": "https://play.unity.com/en/user/002ef2ee-bca7-48de-80d0-b949b480716f"
+                },
+                {
+                    "label": "Unity Learn Path",
+                    "url": "https://github.com/PampX/UnityLearnPath"
+                }
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "/images/unitylearn.png",
+                    "alt": "Unity Learn"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Parcours suivis",
+                    "content": "Unity Essentials, Junior Programmer et Creative Core, couvrant les bases du moteur Unity, la programmation C#, la logique de gameplay et les fondamentaux de la création interactive."
+                },
+                {
+                    "title": "Ce que j’ai appris",
+                    "content": "Bases solides en C# pour Unity, structuration de projets de jeux, conception de mécaniques de gameplay, compréhension des pipelines créatifs et techniques."
+                },
+                {
+                    "title": "Tech / Outils",
+                    "content": "Unity, C#, game development, design interactif."
+                }
             ]
         },
-        "reinforcement-learning-course": {
+        "huggingface-rl-course": {
             "title": "Reinforcement Learning",
+            "tagline": "Apprentissage par renforcement avec Hugging Face",
+            "date": "2025-02",
+            "status": "done",
+            "description": "Cours officiel de Hugging Face dédié au Reinforcement Learning. Cette formation propose une approche progressive et pédagogique de l’apprentissage par renforcement, depuis les concepts fondamentaux jusqu’à l’implémentation d’agents capables d’apprendre par interaction avec un environnement.",
             "tags": [
-                "course",
-                "ia"
+                "ia",
+                "course"
+            ],
+            "links": [
+                {
+                    "label": "Cours",
+                    "url": "https://huggingface.co/learn/deep-rl-course"
+                },
+                {
+                    "label": "My Models",
+                    "url": "https://huggingface.co/PampX"
+                },
+                {
+                    "label": "Github",
+                    "url": "https://github.com/PampX/FORMATION_Deep_Reinforcement_Learning"
+                }
+                ,
+                {
+                    "label": "LunarLander",
+                    "url": "https://huggingface.co/PampX/ppo-LunarLander-v2"
+                },
+                {
+                    "label": "Taxi v3",
+                    "url": "https://huggingface.co/PampX/q-Taxi-v3"
+                }
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "/images/rl.gif",
+                    "alt": "Hugging Face RL course"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Contenu du cours",
+                    "content": "Introduction au Reinforcement Learning, Markov Decision Processes, politiques, récompenses, exploration vs exploitation, Q-Learning et premières implémentations d’agents."
+                },
+                {
+                    "title": "Ce que j’ai appris",
+                    "content": "Compréhension des mécanismes fondamentaux du RL, mise en pratique via des environnements simulés et analyse du comportement d’agents apprenants."
+                },
+                {
+                    "title": "Tech / Outils",
+                    "content": "Python, Reinforcement Learning, environnements simulés, concepts RL modernes."
+                }
             ]
         },
-        "fun-mooc-machine-learning": {
+        "fun-mooc-ml": {
             "title": "Machine Learning",
+            "tagline": "Fondamentaux du machine learning supervisé",
+            "date": "2024-11",
+            "status": "done",
+            "description": "Cours FUN MOOC consacré aux bases du machine learning avec Python et scikit-learn. La formation aborde les concepts clés de l’apprentissage supervisé, depuis la préparation des données jusqu’à l’évaluation des modèles.",
             "tags": [
-                "course",
-                "ia"
+                "ia",
+                "course"
+            ],
+            "links": [
+                {
+                    "label": "Cours",
+                    "url": "https://www.fun-mooc.fr/fr/cours/machine-learning-python-scikit-learn/"
+                }
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "/images/ml.png",
+                    "alt": "Machine learning course"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Contenu du cours",
+                    "content": "Apprentissage supervisé, régression, classification, préparation des données, validation croisée et évaluation des performances des modèles."
+                },
+                {
+                    "title": "Ce que j’ai appris",
+                    "content": "Mise en œuvre de modèles de machine learning avec scikit-learn, compréhension des étapes clés d’un pipeline ML et interprétation des résultats."
+                },
+                {
+                    "title": "Tech / Outils",
+                    "content": "Python, scikit-learn, machine learning, data science."
+                }
             ]
         },
         "hector-influenceur": {
@@ -419,63 +599,6 @@
                 "app",
                 "web",
                 "entrepreneur"
-            ]
-        },
-        "safyr": {
-            "title": "SAFYR",
-            "tagline": "Plateforme web + app pour gestion terrain",
-            "date": "2025-11",
-            "status": "in_progress",
-            "description": "Projet test pour valider le rendu de la page projet : une plateforme type dashboard (glassmorphism) avec gestion de données, modules, et analytics. L’objectif est de vérifier l’affichage des sections, des liens et de la galerie média.",
-            "tags": [
-                "app",
-                "web",
-                "entrepreneur"
-            ],
-            "links": [
-                {
-                    "label": "Live",
-                    "url": "https://example.com"
-                },
-                {
-                    "label": "GitHub",
-                    "url": "https://github.com/username/repo"
-                },
-                {
-                    "label": "Figma",
-                    "url": "https://figma.com/file/xxxx"
-                }
-            ],
-            "media": [
-                {
-                    "type": "image",
-                    "src": "/projects/safyr/cover.png",
-                    "alt": "Dashboard SAFYR"
-                },
-                {
-                    "type": "image",
-                    "src": "/projects/safyr/screen-1.png",
-                    "alt": "Module analytics"
-                },
-                {
-                    "type": "video",
-                    "src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-                    "alt": "Demo vidéo"
-                }
-            ],
-            "sections": [
-                {
-                    "title": "Contexte",
-                    "content": "Créé pour tester une UI de dashboard scientifique : cartes modulaires, filtres, tags, et pages projet dynamiques."
-                },
-                {
-                    "title": "Ce que j’ai fait",
-                    "content": "Structuration des données via portfolio.json, routing /work/:id, UI cards, recherche + filtres, et gabarit de page projet."
-                },
-                {
-                    "title": "Tech",
-                    "content": "React + Router, CSS glassmorphism, data-driven rendering via JSON."
-                }
             ]
         }
     }
