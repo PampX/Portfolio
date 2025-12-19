@@ -30,7 +30,7 @@ export default function Work() {
                 activeTags.every((tag) => project.tags.includes(tag));
 
             return matchesSearch && matchesTags;
-        });
+        }).sort(([,a], [,b])=> a.title.localeCompare(b.title, "fr", { sensitivity: "base"}));
     }, [search, activeTags, projects]);
 
     const rotatingTexts = useMemo(
