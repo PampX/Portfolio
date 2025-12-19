@@ -282,8 +282,7 @@
                 "entrepreneur",
                 "app"
             ],
-            "links": [
-            ],
+            "links": [],
             "media": [
                 {
                     "type": "image",
@@ -446,8 +445,7 @@
                 {
                     "label": "Github",
                     "url": "https://github.com/PampX/FORMATION_Deep_Reinforcement_Learning"
-                }
-                ,
+                },
                 {
                     "label": "LunarLander",
                     "url": "https://huggingface.co/PampX/ppo-LunarLander-v2"
@@ -533,8 +531,7 @@
                 "app",
                 "entrepreneur"
             ],
-            "links": [
-            ],
+            "links": [],
             "media": [
                 {
                     "type": "image",
@@ -599,6 +596,53 @@
                 "app",
                 "web",
                 "entrepreneur"
+            ]
+        },
+        "formation-blender": {
+            "title": "Formation Blender",
+            "tagline": "Formations pour devenir autonome en création 3D",
+            "date": "2025-02",
+            "status": "in_progress",
+            "description": "Formation Blender que je propose pour accompagner des débutants dans la découverte et la prise en main de la 3D. À ce jour, j’ai déjà animé deux sessions de formation, chacune regroupant une dizaine de participants. L’objectif est de transmettre les bases essentielles de Blender afin de rendre les apprenants rapidement autonomes et capables de réaliser leurs propres créations 3D.",
+            "tags": [
+                "blender",
+                "course"
+            ],
+            "links": [
+                {
+                    "label": "Results",
+                    "url": "https://www.instagram.com/p/C30jIaNLFF4/?img_index=1"
+                }
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "/images/pouss1.png",
+                    "alt": "Formation Blender Result"
+                },
+                {
+                    "type": "image",
+                    "src": "/images/pouss2.png",
+                    "alt": "Formation Blender Result"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Contexte",
+                    "content": "Volonté de transmettre les bases de la 3D et de Blender à des publics débutants, à travers des formations pratiques et accessibles."
+                },
+                {
+                    "title": "Déroulé des formations",
+                    "content": "Sessions en groupe d’environ dix personnes, centrées sur la découverte de l’interface, la modélisation de base, l’éclairage, les matériaux et le rendu, afin de permettre aux participants d’être rapidement autonomes."
+                },
+                {
+                    "title": "Ce que j’ai fait",
+                    "content": "Conception du contenu pédagogique, animation des formations, accompagnement des participants et adaptation du rythme selon le niveau du groupe."
+                },
+                {
+                    "title": "Tech / Outils",
+                    "content": "Blender, modélisation 3D, lighting, rendu, pédagogie et vulgarisation technique."
+                }
             ]
         }
     }
