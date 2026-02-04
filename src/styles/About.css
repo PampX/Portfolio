@@ -103,18 +103,37 @@
   font-weight: 600;
 }
 
+/* Empêche le "bougé" des chiffres */
+.age-fixed {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+/* Réserve une largeur stable pour l'âge (ajuste selon ton rendu) */
+.age-number {
+  display: inline-block;
+  min-width: 16ch; /* ≈ longueur stable pour "26.123456789" */
+}
+
+/* Mise en page plus clean */
 .age {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.age-main {
   display: flex;
   align-items: baseline;
   gap: 10px;
-  margin-top: 6px;
 }
 
-.age-number {
-  font-size: 34px;
-  letter-spacing: -0.02em;
-  font-weight: 700;
+.age-seconds {
+  white-space: nowrap;
 }
+
 
 .note {
   margin-top: 12px;

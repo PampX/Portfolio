@@ -5,6 +5,8 @@ import "../styles/About.css";
 const FAVORITE_COLOR = { name: "Viridian", hex: "#40826D" };
 
 const BIRTHDATE = "2000-05-10";
+const BIRTH_MOMENT_ISO = "2000-05-10T04:00:00+02:00";
+
 
 /** Helpers */
 const pad2 = (n) => String(n).padStart(2, "0");
@@ -73,6 +75,12 @@ useEffect(() => {
 
   const age = useMemo(() => computeAgeYears(BIRTHDATE, nowMs), [nowMs]);
   const ageDisplay = useMemo(() => age.toFixed(9), [age]);
+
+  const secondsSinceBirth = useMemo(() => {
+  const birthMs = new Date(BIRTH_MOMENT_ISO).getTime();
+  return Math.floor((nowMs - birthMs) / 1000);
+}, [nowMs]);
+
 
   const colorOfDay = useMemo(() => getColorOfDay(new Date(nowMs)), [nowMs]);
 
@@ -146,8 +154,16 @@ useEffect(() => {
             <div className="card-head"></div>
 
             <div className="age">
-              <div className="age-number">{ageDisplay}</div>
-              <div className="muted">années</div>
+  <div className="age-main">
+    <div className="age-number age-fixed">{ageDisplay}</div>
+    <div className="muted">années</div>
+  </div>
+
+  <div className="muted age-seconds age-fixed">
+    {secondsSinceBirth.toLocaleString("fr-FR")} secondes de vie
+  </div>
+
+
             </div>
           </div>
         </section>
