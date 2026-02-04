@@ -1,8 +1,6 @@
 import PixelBlast from '../components/PixelBlast'
-import ProjectCard from '../components/ProjectCard';
 import RotatingText from '../components/RotatingText'
 import '../styles/Home.css'
-import portfolio from "../data/portfolio.json"
 
 const rotatingTexts = [
     'IA',
@@ -22,7 +20,6 @@ const rotatingTexts = [
 
 
 export default function Home() {
-    const { projects, tags } = portfolio
     return (
         <main className="home">
             <section className="hero-section">
