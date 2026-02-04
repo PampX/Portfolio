@@ -65,7 +65,7 @@ export default function About() {
   const [nowMs, setNowMs] = useState(Date.now());
 
 useEffect(() => {
-  const id = setInterval(() => setNowMs(Date.now()), 10);
+  const id = setInterval(() => setNowMs(Date.now()), 100);
   return () => clearInterval(id);
 }, []);
 
