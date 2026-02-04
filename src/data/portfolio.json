@@ -515,12 +515,38 @@
                 }
             ]
         },
-        "hector-influenceur": {
+        "hector-linfluenceur": {
             "title": "Hector l'influenceur",
+            "tagline": "Les aventures d’Hector Junior, alpaga arc-en-ciel",
+            "date": "2019-12",
+            "status": "in_progress",
+            "description": "Hector l’influenceur est un compte Instagram qui partage les aventures de la plus mignonne des peluches d’alpaga arc-en-ciel : Hector Junior. Avec plus de 1200 abonnés et plus de 400 publications, le compte met en scène ses voyages, ses activités et son quotidien, avec une direction créative centrée sur la narration visuelle, l’humour et le “cute”.",
             "tags": [
                 "insta"
+            ],
+            "links": [
+                {
+                "label": "Instagram",
+                "url": "https://instagram.com/hec.torjunior"
+                }
+            ],
+            "media": [],
+            "sections": [
+                {
+                "title": "Contexte",
+                "content": "Projet de création de contenu et de storytelling visuel autour d’un personnage (Hector Junior), pensé comme une mini “marque” avec un ton et une identité reconnaissables."
+                },
+                {
+                "title": "Ce que j’ai fait",
+                "content": "Création et gestion du compte, conception des posts, mise en scène des photos/vidéos, écriture des captions, maintien d’une régularité de publication et développement progressif de la communauté."
+                },
+                {
+                "title": "Tech / Outils",
+                "content": "Création de contenu, storytelling, direction artistique, photographie/vidéo mobile, Instagram."
+                }
             ]
-        },
+            }
+,
         "grimoire": {
             "title": "Grimoire",
             "tagline": "Catalogue digital connecté aux outils métiers",
@@ -556,48 +582,210 @@
         },
         "tlc": {
             "title": "Trouve le code",
+            "tagline": "Remake web du jeu de société Decrypto",
+            "date": "2024-07",
+            "status": "done",
+            "description": "TLC est un remake en version web du jeu de société Decrypto. Le projet reprend l’esprit du jeu original : communication, déduction et stratégie autour d’un code à faire deviner, le tout dans une expérience accessible directement depuis un navigateur.",
             "tags": [
                 "web",
                 "vg"
+            ],
+            "links": [
+                {
+                    "label":"tlc",
+                    "url":"https://tlc-eosin.vercel.app/"
+                }
+            ],
+            "media": [],
+            "sections": [
+                {
+                "title": "Contexte",
+                "content": "Projet de remake web d’un jeu de société basé sur la communication et la déduction, pensé pour être jouable facilement en ligne sans installation."
+                },
+                {
+                "title": "Ce que j’ai fait",
+                "content": "Adaptation des règles et des mécaniques, développement de la logique de jeu, création d’une interface claire pour jouer en ligne et structuration des écrans pour reproduire l’expérience du jeu original."
+                },
+                {
+                "title": "Tech / Outils",
+                "content": "Application web, logique de jeu, UI/UX."
+                }
             ]
-        },
+            }
+,
         "hexa": {
             "title": "Hexa",
+            "tagline": "Jeu web pour apprendre les couleurs en hexadécimal",
+            "date": "2024-07",
+            "status": "done",
+            "description": "Hexa est une application web ludique qui permet de s’entraîner à deviner des couleurs en retrouvant leur code hexadécimal. L’objectif est de mieux comprendre comment fonctionne l’hexadécimal (RGB → #RRGGBB) et de développer une intuition : être capable d’imaginer la couleur associée à un code affiché.",
             "tags": [
                 "web",
                 "vg"
+            ],
+            "links": [
+                {
+                "label": "Live",
+                "url": "https://hexa-murex.vercel.app/"
+                }
+            ],
+            "media": [],
+            "sections": [
+                {
+                "title": "Contexte",
+                "content": "Mini-jeu pédagogique conçu pour apprendre et pratiquer la lecture des couleurs via leur représentation hexadécimale, tout en rendant l’exercice fun et répétable."
+                },
+                {
+                "title": "Ce que j’ai fait",
+                "content": "Conception de l’idée, développement de l’application web, création de la logique de jeu (génération de couleurs, scoring, validation), mise en place d’une UI simple et efficace et déploiement en ligne."
+                },
+                {
+                "title": "Tech / Outils",
+                "content": "Application web, logique de jeu, UI/UX, déploiement (Vercel)."
+                }
             ]
-        },
-        "p2p": {
-            "title": "Pomme2pain",
+            }
+            ,
+        "pomme2pain": {
+            "title": "Pomme2Pain",
+            "tagline": "Recréation web du jeu de société « 2 pomme 3 pain »",
+            "date": "2024-03",
+            "status": "done",
+            "description": "Pomme2Pain est une recréation en version web du jeu de société « 2 pomme 3 pain ». Le projet vise à retrouver les mécaniques du jeu original dans une expérience simple et accessible depuis un navigateur, idéale pour jouer rapidement sans installation.",
             "tags": [
                 "web",
                 "vg"
+            ],
+            "links": [
+                {
+                "label": "Live",
+                "url": "https://pomme2pain.vercel.app/"
+                }
+            ],
+            "media": [],
+            "sections": [
+                {
+                "title": "Contexte",
+                "content": "Projet de remake web d’un jeu de société, avec l’objectif de rendre le gameplay accessible en ligne et jouable facilement depuis n’importe quel device."
+                },
+                {
+                "title": "Ce que j’ai fait",
+                "content": "Reprise des règles et des mécaniques du jeu, développement de la version web, mise en place de la logique de jeu et d’une interface claire, puis déploiement en ligne."
+                },
+                {
+                "title": "Tech / Outils",
+                "content": "Application web, logique de jeu, UI/UX, déploiement (Vercel)."
+                }
             ]
-        },
-        "r3f": {
-            "title": "ThreeJs Journey",
+            }
+,
+        "threejs-journey": {
+            "title": "Three.js Journey",
+            "tagline": "Formation Three.js / R3F pour créer des expériences 3D sur le web",
+            "date": "2022-01",
+            "status": "done",
+            "description": "Three.js Journey est la formation de Bruno Simon dédiée à la création d’expériences 3D interactives sur le web. J’ai suivi le cours pour apprendre à utiliser Three.js, puis appliquer ces concepts avec React Three Fiber (R3F) afin d’intégrer de la 3D dans des applications web, avec une approche pratique orientée rendu, interactions et performance.",
             "tags": [
                 "web",
                 "course",
                 "blender"
+            ],
+            "links": [
+                {
+                "label": "Cours",
+                "url": "https://threejs-journey.com/"
+                }, 
+                {
+                    "label":"3D live",
+                    "url":"https://14-go-live-navy.vercel.app/"
+                },
+                {
+                    "label":"hunted House",
+                    "url":"https://hunted-house.vercel.app/"
+                },
+                {
+                    "label":"galaxy",
+                    "url":"https://galaxy-steel.vercel.app/"
+                },
+                {
+                    "label":"portal scene",
+                    "url":"https://portal-scene-lovat.vercel.app/"
+                }
+            ],
+            "media": [],
+            "sections": [
+                {
+                "title": "Contexte",
+                "content": "Formation reconnue dans l’écosystème web 3D, axée sur l’apprentissage par la pratique pour construire des scènes interactives et des expériences 3D performantes."
+                },
+                {
+                "title": "Ce que j’ai fait",
+                "content": "Suivi complet du cours, réalisation des exercices et mini-projets, mise en application des bases Three.js (scènes, caméras, matériaux, lumières, animations) puis transition vers React Three Fiber pour intégrer la 3D dans une app React."
+                },
+                {
+                "title": "Tech / Outils",
+                "content": "Three.js, React Three Fiber (R3F), WebGL, shaders (bases), optimisation/performance, Blender (assets 3D)."
+                }
             ]
-        },
-        "chauddevant": {
-            "title": "Chaud Devant !",
+            }
+,
+        "chaud-devant": {
+            "title": "Chaud Devant",
+            "tagline": "Overcooked à la première personne, coop et chaos en cuisine",
+            "date": "2026-01",
+            "status": "paused",
+            "description": "Chaud Devant est un jeu vidéo inspiré du concept de Overcooked, mais en vue à la première personne. Le gameplay repose sur la coordination et la communication pour enchaîner des recettes, gérer le rush et satisfaire des clients personnalisés, avec une grande variété de plats et de situations.",
             "tags": [
                 "unity",
                 "vg"
+            ],
+            "links": [],
+            "media": [],
+            "sections": [
+                {
+                "title": "Contexte",
+                "content": "Projet de jeu vidéo coopératif visant à réinventer l’expérience Overcooked en la rendant plus immersive grâce à une vue FPS et une production de contenu (recettes, clients, variations de service)."
+                },
+                {
+                "title": "Ce que j’ai fait",
+                "content": "Conception du concept et des mécaniques principales, réflexion sur la boucle de gameplay (préparation, cuisson, assemblage, service), définition des besoins en contenu (recettes, clients personnalisés) et structuration des bases du projet."
+                },
+                {
+                "title": "Tech / Outils",
+                "content": "Unity, C#, game design, gameplay systems, prototypage."
+                }
             ]
-        },
+            }
+            ,
         "samaritain": {
             "title": "Samaritain",
+            "tagline": "Réseau social de bonnes actions avec système de récompense",
+            "date": "2026-01",
+            "status": "paused",
+            "description": "Samaritain est une idée d’application visant à encourager les bonnes actions via un système de récompense. Le concept : des personnes peuvent contribuer financièrement pour motiver d’autres utilisateurs à réaliser des actions concrètes (avec preuves), suivre l’impact, et visualiser combien ils ont donné pour aider. L’objectif est de créer une dynamique positive, comme un réseau social, mais dédié à l’entraide et à l’action réelle.",
             "tags": [
                 "app",
                 "web",
                 "entrepreneur"
+            ],
+            "links": [],
+            "media": [],
+            "sections": [
+                {
+                "title": "Contexte",
+                "content": "Projet de réflexion produit autour d’une plateforme d’entraide : transformer de la générosité en actions concrètes, traçables, et motivantes pour tous."
+                },
+                {
+                "title": "Ce que j’ai fait",
+                "content": "Définition du concept et de la proposition de valeur, réflexion sur la boucle d’usage (don → mission → preuve → récompense), cadrage des fonctionnalités clés (profil, feed, transparence des dons, suivi d’impact) et premières idées UX."
+                },
+                {
+                "title": "Tech / Outils",
+                "content": "Conception produit, UX/UI, architecture app/web (à préciser selon implémentation)."
+                }
             ]
-        },
+            }
+,
         "formation-blender": {
             "title": "Formation Blender",
             "tagline": "Formations pour devenir autonome en création 3D",
