@@ -1,61 +1,59 @@
 .PCcontainer {
-    margin: 5px;
-    padding: 5px;
-    flex: 1 1 280px;
+    padding: 16px 18px;
+    flex: 1 1 260px;
     max-width: 300px;
-    min-width: 260px;
-    gap: 16px;
+    min-width: 240px;
     display: flex;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.16);
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.8px);
-    -webkit-backdrop-filter: blur(6.8px);
-    border: 1px solid rgba(255, 255, 255, 0.23);
-    height: 110px;
-    transition: 
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border-color 0.25s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        border-color 0.22s ease;
     cursor: pointer;
 }
-.PCcontainer:hover .PCtitle {
-    opacity: 0.85;
-}
-
 
 .PCcontainer:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow:
-    0 12px 40px rgba(0, 0, 0, 0.25),
-    0 0 20px rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.5);
-    border: 1px solid #B19EEF;
-}
-
-.PCtitleAndPicture{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3), 0 0 18px rgba(177, 158, 239, 0.12);
+    border-color: rgba(177, 158, 239, 0.45);
 }
 
 .PCtitle {
-    text-align: center;
-    font-size: 24px;
-    margin: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.92);
+    line-height: 1.25;
+}
+
+.PCtagline {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.45);
+    margin: 0;
+    line-height: 1.5;
+    flex: 1;
 }
 
 .PCtopics {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 4px;
 }
 
 .PCtopic {
-    border-radius: 10px;
-    padding: 5px;
-    margin: 5px;
-    width: fit-content;
+    border-radius: 6px;
+    padding: 3px 8px;
+    font-size: 11px;
+    font-weight: 500;
+    border: 1px solid var(--tag-color, rgba(255,255,255,0.2));
+    color: var(--tag-color, rgba(255,255,255,0.7));
+    background: transparent;
 }

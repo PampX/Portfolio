@@ -1,8 +1,8 @@
+import { useNavigate } from 'react-router-dom'
+import { motion } from 'motion/react'
 import PixelBlast from '../components/PixelBlast'
-import ProjectCard from '../components/ProjectCard';
 import RotatingText from '../components/RotatingText'
 import '../styles/Home.css'
-import portfolio from "../data/portfolio.json"
 
 const rotatingTexts = [
     'IA',
@@ -22,7 +22,7 @@ const rotatingTexts = [
 
 
 export default function Home() {
-    const { projects, tags } = portfolio
+    const navigate = useNavigate()
     return (
         <main className="home">
             <section className="hero-section">
@@ -59,22 +59,27 @@ export default function Home() {
                     />
                 </div>
             </section>
-            {/* <div className='homePC'>
-                {Object.entries(projects).slice(0,3).map(([id, project]) => {
-                    const projectTopics = project.tags.map(tagId => ({
-                        name: tags[tagId].label,
-                        color: tags[tagId].color
-                    }));
-                    return (
-                        <ProjectCard
-                            key={id}
-                            title={project.title}
-                            topics={projectTopics}
-                            link={"/work/"+id}
-                        />
-                    );
-                })}
-            </div> */}
+
+            <motion.section
+                className="home-intro"
+                initial={{ opacity: 0, y: 28 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            >
+                <p className="home-intro-tag">— Timothée Baudequin</p>
+                <h2 className="home-intro-title">Architecte logiciel &amp; Développeur d'application</h2>
+                <p className="home-intro-desc">
+                    Fullstack · IA · 3D · Game Dev · Freelance depuis 2020
+                </p>
+                <div className="home-intro-ctas">
+                    <button className="home-btn home-btn--primary" onClick={() => navigate('/work')}>
+                        Voir mes projets
+                    </button>
+                    <button className="home-btn home-btn--ghost" onClick={() => navigate('/about')}>
+                        À propos
+                    </button>
+                </div>
+            </motion.section>
         </main>
     )
 }
