@@ -1,212 +1,163 @@
-import { motion } from 'motion/react';
-import '../styles/About.css';
+import { useEffect, useMemo, useState } from "react";
+import PixelBlast from "../components/PixelBlast";
+import "../styles/About.css";
 
-const experiences = [
-    {
-        company: "Solem",
-        role: "Ingénieur Fullstack · IA",
-        period: "Nov 2025 — 2026",
-        description: "Développement d'application web avec intégration IA.",
-        current: true,
-    },
-    {
-        company: "Coptis",
-        role: "Développeur IA",
-        period: "Mai 2025 — Août 2025",
-        description: "Création d'un modèle de formulation cosmétique par IA.",
-    },
-    {
-        company: "PharmaNature",
-        role: "Lead Développeur Fullstack",
-        period: "Avr 2023 — Fév 2025",
-        description: "Encadrement d'une équipe de 5 personnes. Développement d'applications mobiles, sites web, logiciels en ligne et outils internes.",
-        tags: ["Node.js", "Python", "React", "React Native"],
-    },
-    {
-        company: "Factory456",
-        role: "Développeur Robot Logiciel",
-        period: "Sep 2022 — Mars 2023",
-        description: "Automatisation des tâches pour les cabinets comptables.",
-        tags: ["UIPath"],
-    },
-];
+const FAVORITE_COLOR = { name: "Viridian", hex: "#40826D" };
 
-const skills = [
-    { category: "Frontend", items: ["React", "React Native", "CSS / UI"] },
-    { category: "Backend", items: ["Node.js", "Python", "SQL", "C#"] },
-    { category: "IA & Data", items: ["Machine Learning", "Deep Learning", "Q-Learning / DQN"] },
-    { category: "Outils", items: ["Blender 3D", "Unity", "UIPath"] },
-];
+const BIRTHDATE = "2000-05-10";
+const BIRTH_MOMENT_ISO = "2000-05-10T04:00:00+02:00";
 
-const fadeUp = {
-    hidden: { opacity: 0, y: 24 },
-    visible: (i = 0) => ({
-        opacity: 1,
-        y: 0,
-        transition: { delay: i * 0.08, duration: 0.48, ease: [0.22, 1, 0.36, 1] },
-    }),
-};
+
+/** Helpers */
+const pad2 = (n) => String(n).padStart(2, "0");
+
+function hexFromRgb(r, g, b) {
+  return (
+    "#" +
+    [r, g, b]
+      .map((x) => Math.max(0, Math.min(255, x)).toString(16).padStart(2, "0"))
+      .join("")
+      .toUpperCase()
+  );
+}
+
+function hashStringToInt(str) {
+  let h = 2166136261;
+  for (let i = 0; i < str.length; i++) {
+    h ^= str.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return h >>> 0;
+}
+
+function mulberry32(seed) {
+  return function () {
+    let t = (seed += 0x6d2b79f5);
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function getColorOfDay(dateObj = new Date()) {
+  const key = `${dateObj.getFullYear()}-${pad2(dateObj.getMonth() + 1)}-${pad2(
+    dateObj.getDate(),
+  )}`;
+
+  const seed = hashStringToInt(key);
+  const rnd = mulberry32(seed);
+
+  const r = Math.floor(60 + rnd() * 160);
+  const g = Math.floor(60 + rnd() * 160);
+  const b = Math.floor(60 + rnd() * 160);
+  return { key, hex: hexFromRgb(r, g, b) };
+}
+
+function computeAgeYears(birthdateStr, now = Date.now()) {
+  const birth = new Date(birthdateStr).getTime();
+  const diffMs = now - birth;
+  const years = diffMs / (365.2425 * 24 * 60 * 60 * 1000);
+  return years;
+}
 
 export default function About() {
-    return (
-        <main className="about">
-            {/* Hero */}
-            <motion.section initial="hidden" animate="visible" variants={fadeUp}>
-                <p className="about-kicker">— à propos</p>
-                <h1 className="about-name">Timothée Baudequin</h1>
-                <p className="about-title">Architecte logiciel · Développeur d'application</p>
-                <p className="about-bio">
-                    Basé à Castelnau-le-Lez · Freelance depuis déc. 2020 · Passionné par l'IA,
-                    le développement fullstack et la 3D.
-                </p>
-                <div className="about-ctas">
-                    <a href="mailto:timotheebaudequin@gmail.com" className="about-btn about-btn--primary">
-                        Me contacter
-                    </a>
-                    <a
-                        href="https://www.linkedin.com/in/timothee-baudequin/"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="about-btn about-btn--ghost"
-                    >
-                        LinkedIn
-                    </a>
-                </div>
-            </motion.section>
+  const [nowMs, setNowMs] = useState(Date.now());
 
-            {/* Experiences */}
-            <section className="about-section">
-                <motion.p
-                    className="about-section-title"
-                    variants={fadeUp}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                >
-                    Expériences
-                </motion.p>
-                <div className="about-timeline">
-                    {experiences.map((exp, i) => (
-                        <motion.div
-                            className="timeline-item"
-                            key={exp.company}
-                            custom={i}
-                            variants={fadeUp}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true, margin: "-60px" }}
-                        >
-                            <div className="timeline-dot" />
-                            <div className="timeline-header">
-                                <div className="timeline-header-left">
-                                    <span className="timeline-company">{exp.company}</span>
-                                    {exp.current && <span className="timeline-badge">Actuel</span>}
-                                </div>
-                                <span className="timeline-period">{exp.period}</span>
-                            </div>
-                            <p className="timeline-role">{exp.role}</p>
-                            <p className="timeline-desc">{exp.description}</p>
-                            {exp.tags && (
-                                <div className="timeline-tags">
-                                    {exp.tags.map(t => (
-                                        <span key={t} className="timeline-tag">{t}</span>
-                                    ))}
-                                </div>
-                            )}
-                        </motion.div>
-                    ))}
-                </div>
-            </section>
+  useEffect(() => {
+    const id = setInterval(() => setNowMs(Date.now()), 100);
+    return () => clearInterval(id);
+  }, []);
 
-            {/* Skills */}
-            <section className="about-section">
-                <motion.p
-                    className="about-section-title"
-                    variants={fadeUp}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                >
-                    Compétences
-                </motion.p>
-                <div className="skills-grid">
-                    {skills.map((group, i) => (
-                        <motion.div
-                            className="skills-card"
-                            key={group.category}
-                            custom={i}
-                            variants={fadeUp}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true, margin: "-60px" }}
-                        >
-                            <p className="skills-category">{group.category}</p>
-                            <ul className="skills-list">
-                                {group.items.map(item => (
-                                    <li key={item} className="skills-item">{item}</li>
-                                ))}
-                            </ul>
-                        </motion.div>
-                    ))}
-                </div>
-            </section>
+  const age = useMemo(() => computeAgeYears(BIRTHDATE, nowMs), [nowMs]);
+  const ageDisplay = useMemo(() => age.toFixed(9), [age]);
 
-            {/* Education + Languages + Hobbies */}
-            <section className="about-section about-bottom-grid">
-                <motion.div
-                    className="about-card"
-                    variants={fadeUp}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                >
-                    <p className="about-card-label">Formation</p>
-                    <p className="about-card-title">Master Architecte logiciel</p>
-                    <p className="about-card-sub">Développeur d'application · Spécialité IA & Big Data</p>
-                    <p className="about-card-meta">Epitech Montpellier · 2021–2022</p>
-                </motion.div>
+  const secondsSinceBirth = useMemo(() => {
+    const birthMs = new Date(BIRTH_MOMENT_ISO).getTime();
+    return Math.floor((nowMs - birthMs) / 1000);
+  }, [nowMs]);
 
-                <motion.div
-                    className="about-card"
-                    custom={1}
-                    variants={fadeUp}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                >
-                    <p className="about-card-label">Langues</p>
-                    <div className="lang-list">
-                        <div className="lang-item">
-                            <span className="lang-name">Français</span>
-                            <span className="lang-level">Natif</span>
-                        </div>
-                        <div className="lang-item">
-                            <span className="lang-name">Anglais</span>
-                            <span className="lang-level">C1</span>
-                        </div>
-                        <div className="lang-item">
-                            <span className="lang-name">Espagnol</span>
-                            <span className="lang-level">B1</span>
-                        </div>
-                    </div>
-                </motion.div>
+  const colorOfDay = useMemo(() => getColorOfDay(new Date(nowMs)), [nowMs]);
 
-                <motion.div
-                    className="about-card"
-                    custom={2}
-                    variants={fadeUp}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                >
-                    <p className="about-card-label">Loisirs</p>
-                    <div className="hobbies-list">
-                        {["Modélisation 3D", "Tennis & Workout", "Exploration scientifique", "Jeux-vidéo", "Passion automobile"].map(h => (
-                            <span key={h} className="hobby-tag">{h}</span>
-                        ))}
-                    </div>
-                </motion.div>
-            </section>
-        </main>
-    );
+  return (
+    <main className="about">
+      <PixelBlast
+        className="pixelblast-bg"
+        variant="square"
+        pixelSize={6}
+        color="#B19EEF"
+        patternScale={3}
+        patternDensity={1.2}
+        pixelSizeJitter={0.5}
+        rippleSpeed={0.4}
+        rippleThickness={0.12}
+        rippleIntensityScale={1.5}
+        speed={0.6}
+        edgeFade={0.25}
+        transparent
+      />
+
+      <section className="about-shell">
+        <header className="about-header card">
+          <div>
+            <div className="kicker">About</div>
+            <h1 className="title">Timothée Baudequin</h1>
+            <p className="subtitle">Developer • IA • Web • Game Dev • 3D</p>
+          </div>
+        </header>
+
+        <section className="about-grid">
+          <div className="card about-card">
+            <div className="card-head">
+              <h2>Couleur préférée</h2>
+            </div>
+
+            <div className="row">
+              <div
+                className="swatch"
+                style={{ backgroundColor: FAVORITE_COLOR.hex }}
+                title={FAVORITE_COLOR.hex}
+              />
+              <div className="row-text">
+                <div className="value">{FAVORITE_COLOR.name}</div>
+                <div className="muted">{FAVORITE_COLOR.hex}</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="card about-card">
+            <div className="card-head">
+              <h2>Couleur du jour</h2>
+              <span className="muted">{colorOfDay.key}</span>
+            </div>
+
+            <div className="row">
+              <div
+                className="swatch"
+                style={{ backgroundColor: colorOfDay.hex }}
+                title={colorOfDay.hex}
+              />
+              <div className="row-text">
+                <div className="value">{colorOfDay.hex}</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="card about-card about-card--wide">
+            <div className="card-head"></div>
+
+            <div className="age">
+              <div className="age-main">
+                <div className="age-number age-fixed">{ageDisplay}</div>
+                <div className="muted">années</div>
+              </div>
+
+              <div className="muted age-seconds age-fixed">
+                {secondsSinceBirth.toLocaleString("fr-FR")} secondes de vie
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  );
 }

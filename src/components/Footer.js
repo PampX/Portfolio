@@ -13,10 +13,10 @@ export default function Footer() {
 
                 <div className="footer-center">
                     <a href="mailto:timotheebaudequin@gmail.com">Email</a>
-                    <a href="https://github.com/PampX" target="_blank">GitHub</a>
-                    <a href="https://www.linkedin.com/in/timothee-baudequin/" target="_blank">LinkedIn</a>
-                    <a href="https://www.instagram.com/hec.torjunior" target="_blank">Instagram</a>
-                    <a href="https://www.instagram.com/hec.torjunior3D" target="_blank">Instagram3D</a>
+                    <a href="https://github.com/PampX">GitHub</a>
+                    <a href="https://www.linkedin.com/in/timothee-baudequin/">LinkedIn</a>
+                    <a href="https://www.instagram.com/hec.torjunior">Instagram</a>
+                    <a href="https://www.instagram.com/hec.torjunior3D">Instagram3D</a>
                 
                 </div>
 
