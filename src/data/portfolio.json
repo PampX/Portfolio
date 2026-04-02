@@ -95,7 +95,12 @@
                     "url": "https://oceanpiscine.vercel.app/"
                 }
             ],
-            "media": [],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "/images/oceanpiscine.png",
+                    "alt": "Ocean Piscine"
+                }],
             "sections": [
                 {
                     "title": "Origine",
