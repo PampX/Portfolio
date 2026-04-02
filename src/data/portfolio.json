@@ -42,6 +42,42 @@
         }
     },
     "projects": {
+        "conference-ia-2026": {
+            "title": "Conférence IA — Semaine des Mathématiques",
+            "tagline": "Collège Jean-Monnet à Yssingeaux — Le cerveau humain vs l'intelligence artificielle",
+            "date": "2026-03",
+            "status": "done",
+            "description": "Le 20 mars 2026, j'ai animé une conférence au collège Jean-Monnet à Yssingeaux pour clôturer la Semaine des mathématiques, placée sous le signe de l'égalité. Environ 40 personnes (élèves, familles, enseignants) ont participé à une réflexion accessible sur les liens entre le cerveau humain et l'intelligence artificielle. La conférence a retracé l'histoire de l'IA, distingué les différents types et leurs usages, tout en ouvrant des pistes de réflexion sur l'accès, la responsabilité et les biais. Elle s'est conclue par une citation d'Alan Turing : « Est-ce que simuler l'intelligence c'est être intelligent ? »",
+            "tags": [
+                "ia",
+                "course"
+            ],
+            "links": [
+                {
+                    "label": "Article de presse",
+                    "url": "https://www.lacommere43.fr/yssingeaux-les-sucs/item/81063-yssingeaux-la-semaine-des-mathematiques-s-est-refermee-sur-une-conference-au-college-jean-monnet.html"
+                }
+            ],
+            "media": [],
+            "sections": [
+                {
+                    "title": "Contexte",
+                    "content": "Conférence de clôture de la Semaine des mathématiques 2026 au collège Jean-Monnet à Yssingeaux, mon ancien collège. Environ 40 participants : élèves, familles et enseignants."
+                },
+                {
+                    "title": "Thèmes abordés",
+                    "content": "Comparaison cerveau humain ↔ intelligence artificielle · Histoire de l'IA : débuts théoriques → applications actuelles · Types d'IA et leurs usages · Différences fondamentales entre intelligence humaine et IA · Enjeux de l'égalité : accès, responsabilité, biais des algorithmes"
+                },
+                {
+                    "title": "Conclusion",
+                    "content": "Citation d'Alan Turing : « Est-ce que simuler l'intelligence c'est être intelligent ? » — une question qui a permis au public de réfléchir aux enjeux philosophiques et éthiques de l'IA."
+                },
+                {
+                    "title": "Médias",
+                    "content": "Couverte par la presse locale (La Commère 43) — article détaillant la conférence et son impact."
+                }
+            ]
+        },
         "oceanpiscine": {
             "title": "Océanpiscine",
             "tagline": "Site interne né d'une blague, devenu une vraie plateforme communautaire",
