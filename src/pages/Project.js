@@ -1,14 +1,16 @@
 import { useMemo, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import useLanguage from "../hooks/useLanguage";
+import { translateData } from "../utils/translateData";
 import portfolio from "../data/portfolio.json";
 import "../styles/ProjectPage.css";
 import PixelBlast from "../components/PixelBlast";
 
 const STATUS = {
-    in_progress: { label: "En cours", tone: "info" },
-    done: { label: "Terminé", tone: "success" },
-    paused: { label: "En pause", tone: "warning" },
-    stopped: { label: "Arrêté", tone: "danger" },
+    in_progress: { key: "status_in_progress", tone: "info" },
+    done: { key: "status_done", tone: "success" },
+    paused: { key: "status_paused", tone: "warning" },
+    stopped: { key: "status_stopped", tone: "danger" },
 };
 
 function formatDate(dateStr) {
@@ -24,6 +26,7 @@ function formatDate(dateStr) {
 
 export default function ProjectPage() {
     const { id } = useParams();
+    const { t, language } = useLanguage();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -32,15 +35,15 @@ export default function ProjectPage() {
     const project = portfolio.projects?.[id];
     const tags = portfolio.tags || {};
 
-    const meta = STATUS[project?.status] || { label: "—", tone: "neutral" };
+    const meta = STATUS[project?.status] || { key: "—", tone: "neutral" };
     const dateLabel = useMemo(() => formatDate(project?.date), [project?.date]);
 
     if (!project) {
         return (
             <div className="project-page">
                 <div className="project-shell">
-                    <p className="pp-muted">Projet introuvable.</p>
-                    <Link to="/work" className="pp-link">← Retour Work</Link>
+                    <p className="pp-muted">{t('project_page.project_not_found')}</p>
+                    <Link to="/work" className="pp-link">{t('project_page.back_work')}</Link>
                 </div>
             </div>
         );
@@ -76,12 +79,12 @@ export default function ProjectPage() {
                 <header className="pp-header card">
                     <div className="pp-header__left">
                         <div className="pp-kicker">Project</div>
-                        <h1 className="pp-title">{project.title}</h1>
-                        {project.tagline && <p className="pp-tagline">{project.tagline}</p>}
+                        <h1 className="pp-title">{translateData(language, 'projects', id, 'title') || project.title}</h1>
+                        {project.tagline && <p className="pp-tagline">{translateData(language, 'projects', id, 'tagline') || project.tagline}</p>}
 
                         <div className="pp-badges">
                             <span className={`pp-status pp-status--${meta.tone}`}>
-                                {meta.label}
+                                {meta.key === "—" ? "—" : t(`work.${meta.key}`)}
                             </span>
                             {dateLabel && <span className="pp-date">{dateLabel}</span>}
                         </div>
@@ -117,13 +120,13 @@ export default function ProjectPage() {
                         <div className="pp-meta">
                             {project.role && (
                                 <div className="pp-meta__row">
-                                    <span className="pp-meta__label">Rôle</span>
+                                    <span className="pp-meta__label">{t('project_page.role')}</span>
                                     <span className="pp-meta__value">{project.role}</span>
                                 </div>
                             )}
                             {project.stack && (
                                 <div className="pp-meta__row">
-                                    <span className="pp-meta__label">Stack</span>
+                                    <span className="pp-meta__label">{t('project_page.stack')}</span>
                                     <span className="pp-meta__value">{project.stack}</span>
                                 </div>
                             )}
@@ -133,8 +136,8 @@ export default function ProjectPage() {
 
                 <div className="pp-grid">
                     <section className="card pp-section">
-                        <h2 className="pp-h2">Contexte & Description</h2>
-                        <p className="pp-text">{project.description || "—"}</p>
+                        <h2 className="pp-h2">{t('project_page.context')}</h2>
+                        <p className="pp-text">{translateData(language, 'projects', id, 'description') || project.description || "—"}</p>
 
                         {Array.isArray(project.sections) && project.sections.length > 0 && (
                             <div className="pp-sections">
@@ -150,9 +153,9 @@ export default function ProjectPage() {
 
                     <section className="card pp-section">
                         <div className="pp-section__head">
-                            <h2 className="pp-h2">Galerie</h2>
+                            <h2 className="pp-h2">{t('project_page.gallery')}</h2>
                             <span className="pp-muted">
-                                {(project.media || []).length} média(s)
+                                {(project.media || []).length} {(project.media || []).length === 1 ? t('project_page.media_count_one') : t('project_page.media_count_other')}
                             </span>
                         </div>
 
@@ -178,7 +181,7 @@ export default function ProjectPage() {
                             ))}
 
                             {(!project.media || project.media.length === 0) && (
-                                <div className="pp-empty">Aucun média pour ce projet.</div>
+                                <div className="pp-empty">{t('project_page.no_media')}</div>
                             )}
                         </div>
                     </section>
