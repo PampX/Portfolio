@@ -1,29 +1,47 @@
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 import { motion } from 'motion/react'
+import useLanguage from '../hooks/useLanguage'
 import PixelBlast from '../components/PixelBlast'
 import RotatingText from '../components/RotatingText'
 import '../styles/Home.css'
 
-const rotatingTexts = [
-    'IA',
-    'Machine Learning',
-    "Deep Learning",
-    "Reinforcement Learning",
-    'Développement',
-    'Programmation',
-    'Lead Developer',
-    '3D',
-    'Game Development',
-    'Gaming',
-    'Freelance',
-    "<3",
-    "<TB/>"
-];
-
+const rotatingTexts = {
+    fr: [
+        'IA',
+        'Machine Learning',
+        'Deep Learning',
+        'Reinforcement Learning',
+        'Développement',
+        'Programmation',
+        'Lead Developer',
+        '3D',
+        'Game Development',
+        'Gaming',
+        'Freelance',
+        "<3",
+        "<TB/>"
+    ],
+    en: [
+        'AI',
+        'Machine Learning',
+        'Deep Learning',
+        'Reinforcement Learning',
+        'Development',
+        'Programming',
+        'Lead Developer',
+        '3D',
+        'Game Development',
+        'Gaming',
+        'Freelancing',
+        "<3",
+        "<TB/>"
+    ]
+};
 
 export default function Home() {
     const navigate = useNavigate()
+    const { language, t } = useLanguage()
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -49,9 +67,9 @@ export default function Home() {
                 />
 
                 <div className="hero-content">
-                    <p className="hero-heading">I do</p>
+                    <p className="hero-heading">{t('home.heading')}</p>
                     <RotatingText
-                        texts={rotatingTexts}
+                        texts={rotatingTexts[language]}
                         mainClassName="hero-rotating-text"
                         splitLevelClassName="hero-rotating-text__split"
                         elementLevelClassName="hero-rotating-text__element"
@@ -73,16 +91,16 @@ export default function Home() {
                 transition={{ delay: 0.3, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             >
                 <p className="home-intro-tag">— Timothée Baudequin</p>
-                <h2 className="home-intro-title">Architecte logiciel &amp; Développeur d'application</h2>
+                <h2 className="home-intro-title">{t('home.subtitle')}</h2>
                 <p className="home-intro-desc">
-                    Fullstack · IA · 3D · Game Dev · Freelance depuis 2020
+                    {t('home.description')}
                 </p>
                 <div className="home-intro-ctas">
                     <button className="home-btn home-btn--primary" onClick={() => navigate('/work')}>
-                        Voir mes projets
+                        {t('home.cta_projects')}
                     </button>
                     <button className="home-btn home-btn--ghost" onClick={() => navigate('/about')}>
-                        À propos
+                        {t('home.cta_about')}
                     </button>
                 </div>
             </motion.section>
