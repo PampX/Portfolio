@@ -1,0 +1,96 @@
+{
+  "hobbies": {
+    "gaming": {
+      "id": "gaming",
+      "title": "Gaming",
+      "icon": "🎮",
+      "description": "Passion pour les jeux vidéo immersifs et innovants",
+      "image": "/images/hobbies/gaming.png",
+      "stats": {
+        "label": "Heures jouées",
+        "value": "+ de 10 000",
+        "unit": "h",
+        "color": "#78F6FF"
+      },
+      "favorites": [
+        "Forza Horizon 5",
+        "Outer Wilds",
+        "Hollow Knight", 
+        "GTA V", 
+        "Far Cry 4"
+      ]
+    },
+    "sport": {
+      "id": "sport",
+      "title": "Sport",
+      "icon": "🏆",
+      "description": "Sportif régulier passionné par la compétition",
+      "image": "/images/hobbies/sport.png",
+      "stats": {
+        "label": "Tennis",
+        "value": "Champion Double Mix",
+        "unit": "Auvergne Rhône-Alpes - 2018",
+        "color": "#67d672"
+      },
+      "achievement": {
+        "emoji": "🏆",
+        "text": "Champion Double Mix 2018 - Auvergne Rhône-Alpes"
+      },
+      "mainActivity": "Tennis",
+      "sports": [
+        "Tennis",
+        "Workout",
+        "Badminton", 
+        "Vélo", 
+        "Natation"
+      ]
+    },
+    "cinema": {
+      "id": "cinema",
+      "title": "Cinéma",
+      "icon": "🎬",
+      "description": "Cinéphile passionné par le storytelling et la direction visuelle",
+      "image": "/images/hobbies/cinema.png",
+      "stats": {
+        "label": "Films regardés",
+        "value": "+ de 1 000",
+        "unit": "",
+        "color": "#e2ba1c"
+      },
+      "achievement": {
+        "emoji": "🎥",
+        "text": "Cinéphile Confirmé"
+      },
+      "favorites": [
+        "Tenet",
+        "Avengers Endgame", 
+        "Hoppers", 
+        "Fantastic Four: First Step"
+      ]
+    },
+    "automotive": {
+      "id": "automotive",
+      "title": "Passion Automobile",
+      "icon": "🏎️",
+      "description": "Passion pour l'ingénierie automobile et les voitures de prestige",
+      "image": "/images/hobbies/automotive.png",
+      "stats": {
+        "label": "Supercar conduite",
+        "value": "Lamborghini",
+        "unit": "Huracán",
+        "color": "#e63e5d"
+      },
+      "achievement": {
+        "emoji": "🏁",
+        "text": "Piloté une Lamborghini Huracán"
+      },
+      "favoriteModels": [
+        "Mercedes G63",
+        "Bugatti Chiron Noir", 
+        "Porsche GT3 RS",
+        "Mercedes GT63"
+
+      ]
+    }
+  }
+}

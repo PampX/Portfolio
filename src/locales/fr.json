@@ -1,0 +1,56 @@
+{
+  "header": {
+    "work": "Projets",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "home": {
+    "heading": " ",
+    "subtitle": "Architecte logiciel & Développeur d'application",
+    "description": "Fullstack · IA · 3D · Game Dev · Freelance depuis 2020",
+    "cta_projects": "Voir mes projets",
+    "cta_about": "À propos"
+  },
+  "work": {
+    "title": "Projets",
+    "search_placeholder": "Rechercher un projet...",
+    "other_projects": "Autres projets",
+    "project_count_one": "projet",
+    "project_count_other": "projets",
+    "status_in_progress": "En cours",
+    "status_done": "Terminé",
+    "status_paused": "En pause",
+    "status_stopped": "Arrêté"
+  },
+  "about": {
+    "subtitle": "Developer • IA • Web • Game Dev • 3D",
+    "hobbies_title": "Passions & Loisirs",
+    "experiences_title": "Expériences Professionnelles",
+    "filter_by_tech": "Filtrer par technos:",
+    "skills_title": "Compétences Techniques",
+    "education_title": "Formation",
+    "years": "ans",
+    "favorite_color": "Couleur préférée",
+    "color_of_day": "Couleur du jour",
+    "disciplines": "Discipline:",
+    "sports": "Sports:",
+    "favorites": "Favoris:",
+    "models": "Modèles:"
+  },
+  "project_page": {
+    "back": "← Retour",
+    "back_work": "← Retour Projets",
+    "project_not_found": "Projet introuvable.",
+    "context": "Contexte & Description",
+    "gallery": "Galerie",
+    "media_count_one": "média",
+    "media_count_other": "médias",
+    "no_media": "Aucun média pour ce projet.",
+    "role": "Rôle",
+    "stack": "Stack"
+  },
+  "footer": {
+    "description": "Developer • IA • Web • Game Dev",
+    "copyright": "©"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "tags": {
+    "react": {
+      "label": "React",
+      "color": "#61DAFB"
+    },
+    "reactnative": {
+      "label": "React Native",
+      "color": "#61DAFB"
+    },
+    "nodejs": {
+      "label": "Node.js",
+      "color": "#68A063"
+    },
+    "python": {
+      "label": "Python",
+      "color": "#3776AB"
+    },
+    "ia": {
+      "label": "IA/ML",
+      "color": "#78F6FF"
+    },
+    "sql": {
+      "label": "SQL",
+      "color": "#CC2927"
+    },
+    "csharp": {
+      "label": "C#",
+      "color": "#239120"
+    },
+    "uipath": {
+      "label": "UIPath",
+      "color": "#003DA5"
+    },
+    "leadership": {
+      "label": "Leadership",
+      "color": "#E2BA1C"
+    },
+    "blender": {
+      "label": "Blender",
+      "color": "#F5971D"
+    },
+    "unity": {
+      "label": "Unity",
+      "color": "#CFC2B2"
+    }
+  },
+  "experiences": {
+    "solem-2025": {
+      "title": "Ingénieur Fullstack - IA",
+      "company": "Solem",
+      "date": "2025-11",
+      "endDate": "2026-04",
+      "status": "done",
+      "location": "Montpellier",
+      "description": "Développement Application web",
+      "longDescription": "Développement et architecture d'une application web fullstack. Gestion des technologies modernes.",
+      "tags": ["react", "nodejs"],
+      "highlights": [
+        "Architecture fullstack scalable",
+        "Développement frontend React moderne"
+      ]
+    },
+    "coptis-2025": {
+      "title": "Développeur IA",
+      "company": "Coptis",
+      "date": "2025-05",
+      "endDate": "2025-08",
+      "status": "done",
+      "location": "Montpellier",
+      "description": "Création d'un modèle de formulation cosmétique",
+      "longDescription": "Développement d'un modèle IA pour optimiser les formulations cosmétiques. Travail sur le preprocessing des données, entraînement et validation du modèle.",
+      "tags": ["python", "ia", "unity"],
+      "highlights": [
+        "Modèle ML de formulation cosmétique",
+        "Prétraitement et analyse de données",
+        "Validation et optimisation du modèle"
+      ]
+    },
+    "pharmanature-2023": {
+      "title": "Lead Développeur Fullstack",
+      "company": "PharmaNature",
+      "date": "2023-04",
+      "endDate": "2025-02",
+      "status": "done",
+      "location": "Remote",
+      "description": "Encadrement d'une équipe de 5 personnes. Développement d'applications mobiles, de sites web, de logiciels en ligne et d'outils internes.",
+      "longDescription": "En tant que Lead Developer, j'ai dirigé une équipe de 5 développeurs sur la création et la maintenance de multiples applications (mobile, web, desktop). Stack varié incluant Node.js, Python, React et React Native. Responsabilités: architecture, code reviews, mentoring et gestion technique des projets.",
+      "tags": ["react", "reactnative", "nodejs", "python", "leadership", "sql"],
+      "highlights": [
+        "Leadership d'équipe de 5 personnes",
+        "Gestion d'une stack technologique variée",
+        "Architecture d'applications multi-plateformes",
+        "Mentoring et code reviews"
+      ]
+    },
+    "factory456-2022": {
+      "title": "Développeur Robot Logiciel",
+      "company": "Factory456",
+      "date": "2022-09",
+      "endDate": "2023-03",
+      "status": "done",
+      "location": "Montpellier",
+      "description": "Automatisation des tâches pour les cabinets comptables.",
+      "longDescription": "Développement de robots logiciels (RPA) utilisant UIPath pour l'automatisation de processus comptables. Conception, implémentation et déploiement de solutions d'automatisation.",
+      "tags": ["uipath"],
+      "highlights": [
+        "Automatisation RPA avec UIPath",
+        "Processus comptables optimisés",
+        "Déploiement en production"
+      ]
+    }
+  },
+  "education": {
+    "epitech-master": {
+      "degree": "Master Architecte Logiciel Développeur d'application",
+      "school": "Epitech Montpellier",
+      "date": "2021-2022",
+      "specialty": "IA et Big Data",
+      "tags": ["ia", "python"]
+    }
+  }
+}
