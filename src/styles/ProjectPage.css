@@ -15,7 +15,7 @@
 .project-shell {
     max-width: 1100px;
     margin: 0 auto;
-    margin-top: 150px;
+    margin-top: 50px;
 }
 
 .card {
@@ -39,6 +39,28 @@
 
 .pp-link:hover {
     color: rgba(255, 255, 255, 0.95);
+}
+
+.pp-back-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.pp-back-link:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.22);
 }
 
 .pp-header {

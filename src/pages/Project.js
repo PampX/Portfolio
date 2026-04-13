@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import portfolio from "../data/portfolio.json";
 import "../styles/ProjectPage.css";
@@ -24,6 +24,10 @@ function formatDate(dateStr) {
 
 export default function ProjectPage() {
     const { id } = useParams();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [id]);
 
     const project = portfolio.projects?.[id];
     const tags = portfolio.tags || {};
@@ -68,6 +72,7 @@ export default function ProjectPage() {
                 />
             </section>
             <div className="project-shell">
+                <Link to="/work" className="pp-back-link">← Retour</Link>
                 <header className="pp-header card">
                     <div className="pp-header__left">
                         <div className="pp-kicker">Project</div>

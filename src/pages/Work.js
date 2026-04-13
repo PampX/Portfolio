@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Work.css";
 import portfolio from "../data/portfolio.json";
@@ -31,8 +31,13 @@ export default function Work() {
     const { projects, tags } = portfolio;
     const navigate = useNavigate();
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const [search, setSearch] = useState("");
     const [activeTags, setActiveTags] = useState([]);
+    const [activeStatuses, setActiveStatuses] = useState([]);
 
     const toggleTag = (tagId) => {
         setActiveTags((prev) =>
@@ -40,13 +45,20 @@ export default function Work() {
         );
     };
 
+    const toggleStatus = (statusId) => {
+        setActiveStatuses((prev) =>
+            prev.includes(statusId) ? prev.filter((s) => s !== statusId) : [...prev, statusId]
+        );
+    };
+
     const filteredProjects = useMemo(() => {
         return Object.entries(projects).filter(([_, p]) => {
             const matchesSearch = p.title.toLowerCase().includes(search.toLowerCase());
             const matchesTags = activeTags.length === 0 || activeTags.every((t) => p.tags.includes(t));
-            return matchesSearch && matchesTags;
+            const matchesStatus = activeStatuses.length === 0 || activeStatuses.includes(p.status);
+            return matchesSearch && matchesTags && matchesStatus;
         });
-    }, [search, activeTags, projects]);
+    }, [search, activeTags, activeStatuses, projects]);
 
     // Group by date key, separate undated
     const { sortedGroups, undated } = useMemo(() => {
@@ -98,6 +110,21 @@ export default function Work() {
                                 style={{ "--tag-color": tag.color }}
                             >
                                 {tag.label}
+                            </button>
+                        );
+                    })}
+                </div>
+                <div className="status-filters">
+                    {Object.entries(STATUS_CONFIG).map(([id, status]) => {
+                        const active = activeStatuses.includes(id);
+                        return (
+                            <button
+                                key={id}
+                                onClick={() => toggleStatus(id)}
+                                className={`status-filter ${active ? "active" : ""}`}
+                                style={{ "--status-color": status.color }}
+                            >
+                                {status.label}
                             </button>
                         );
                     })}

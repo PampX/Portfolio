@@ -88,6 +88,35 @@
     box-shadow: 0 0 10px var(--tag-color);
 }
 
+.status-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.status-filter {
+    border: 1px solid var(--status-color);
+    color: var(--status-color);
+    background: transparent;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.status-filter:hover {
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.status-filter.active {
+    background: var(--status-color);
+    color: #000;
+    box-shadow: 0 0 10px var(--status-color);
+}
+
 /* ── Git Timeline ── */
 .git-timeline {
     position: relative;

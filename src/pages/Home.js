@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 import { motion } from 'motion/react'
 import PixelBlast from '../components/PixelBlast'
 import RotatingText from '../components/RotatingText'
@@ -23,6 +24,11 @@ const rotatingTexts = [
 
 export default function Home() {
     const navigate = useNavigate()
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <main className="home">
             <section className="hero-section">
