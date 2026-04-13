@@ -1,5 +1,5 @@
 .about {
-  margin-top: 150px;
+  margin-top: 50px;
   padding: 32px 20px;
   position: relative;
   color: rgba(255,255,255,0.92);
@@ -32,6 +32,87 @@
 .about-header {
   padding: 22px;
   margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-header-age {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.age-display {
+  text-align: center;
+}
+
+.age-display .age-number {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.age-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+  margin-top: 8px;
+}
+
+/* ── COLORS SHOWCASE ── */
+.colors-showcase {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding: 0;
+}
+
+.color-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  flex: 1;
+}
+
+.color-swatch {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  flex-shrink: 0;
+}
+
+.color-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.color-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+}
+
+.color-code {
+  font-size: 11px;
+  color: rgba(255,255,255,0.6);
+  font-family: monospace;
 }
 
 .kicker {
@@ -52,6 +133,417 @@
   color: rgba(255,255,255,0.68);
 }
 
+/* ── SECTIONS ── */
+.about-section {
+  margin-bottom: 48px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+  color: #fff;
+  letter-spacing: 0.01em;
+}
+
+/* ── HOBBIES SECTION ── */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.hobby-card-stats {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all 0.2s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.hobby-card-stats:hover {
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(177, 158, 239, 0.25);
+  transform: translateY(-2px);
+}
+
+.hobby-card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hobby-icon-badge {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.hobby-card-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.hobby-card-desc {
+  margin: 0;
+  font-size: 12px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.5;
+}
+
+.hobby-stats-section {
+  background: rgba(177, 158, 239, 0.08);
+  border: 1px solid rgba(177, 158, 239, 0.15);
+  border-radius: 10px;
+  padding: 12px;
+  margin: 4px 0;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+  margin-bottom: 6px;
+}
+
+.stat-value {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 6px;
+}
+
+.stat-number {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--stat-color);
+}
+
+.stat-unit {
+  font-size: 12px;
+  color: var(--stat-color);
+  opacity: 0.8;
+}
+
+.hobby-achievement-badge {
+  background: rgba(177, 158, 239, 0.12);
+  border: 1px solid rgba(177, 158, 239, 0.25);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.achievement-emoji {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.achievement-text {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.85);
+}
+
+.hobby-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.list-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+}
+
+.list-items-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.list-badge {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  color: rgba(255,255,255,0.75);
+}
+
+/* ── EXPÉRIENCES SECTION ── */
+.exp-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 16px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.filter-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+}
+
+.tag-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.tag-filter {
+  border: 1px solid var(--tag-color);
+  color: var(--tag-color);
+  background: transparent;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tag-filter:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.tag-filter.active {
+  background: var(--tag-color);
+  color: #000;
+  box-shadow: 0 0 10px var(--tag-color);
+}
+
+.experiences-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.exp-card {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.exp-card:hover {
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(177, 158, 239, 0.35);
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.exp-title {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.exp-company {
+  font-size: 12px;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.exp-status {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 999px;
+  color: var(--s-color);
+  border: 1px solid var(--s-color);
+  opacity: 0.85;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.exp-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.65);
+}
+
+.exp-date {
+  font-weight: 500;
+}
+
+.exp-description {
+  margin: 0;
+  font-size: 13px;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.6;
+}
+
+.exp-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.highlight-item {
+  font-size: 12px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.5;
+}
+
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.exp-tag {
+  font-size: 10px;
+  font-weight: 500;
+  padding: 2px 7px;
+  border-radius: 5px;
+  color: var(--tag-color);
+  border: 1px solid var(--tag-color);
+  opacity: 0.75;
+}
+
+/* ── COMPÉTENCES SECTION ── */
+.skills-cloud-card {
+  padding: 32px;
+  text-align: center;
+}
+
+.skills-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-cloud-tag {
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: rgba(177, 158, 239, 0.12);
+  border: 1px solid rgba(177, 158, 239, 0.25);
+  color: rgba(177, 158, 239, 0.95);
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  cursor: default;
+  display: inline-block;
+}
+
+.skill-cloud-tag:hover {
+  background: rgba(177, 158, 239, 0.2);
+  border-color: rgba(177, 158, 239, 0.4);
+  transform: scale(1.05);
+}
+
+.skill-size-xl {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px 18px;
+}
+
+.skill-size-lg {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 9px 16px;
+}
+
+.skill-size-md {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 14px;
+}
+
+.skill-size-sm {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 12px;
+}
+
+.skill-size-xs {
+  font-size: 11px;
+  font-weight: 400;
+  padding: 5px 10px;
+}
+
+/* ── FORMATION SECTION ── */
+.education-card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.edu-degree {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.95);
+}
+
+.edu-school {
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+}
+
+.edu-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.65);
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.edu-specialty,
+.edu-year {
+  display: flex;
+  align-items: center;
+}
+
+/* ── ABOUT GRID (infos perso) ── */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -73,7 +565,8 @@
   margin-bottom: 14px;
 }
 
-.card-head h2 {
+.card-head h2,
+.card-head h3 {
   margin: 0;
   font-size: 16px;
   letter-spacing: 0.02em;
@@ -96,6 +589,7 @@
   border-radius: 14px;
   border: 1px solid rgba(255,255,255,0.15);
   box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+  flex-shrink: 0;
 }
 
 .row-text .value {
@@ -131,10 +625,6 @@
   white-space: nowrap;
 }
 
-.note {
-  margin-top: 12px;
-}
-
 code {
   background: rgba(0,0,0,0.2);
   padding: 2px 6px;
@@ -142,11 +632,71 @@ code {
   border: 1px solid rgba(255,255,255,0.12);
 }
 
+/* ── RESPONSIVE ── */
 @media (max-width: 900px) {
+  .hobbies-grid,
   .about-grid {
     grid-template-columns: 1fr;
   }
+
   .about-card--wide {
     grid-column: auto;
+  }
+
+  .exp-header {
+    flex-direction: column;
+  }
+
+  .exp-meta {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .skill-cloud {
+    gap: 8px;
+  }
+
+  .skill-cloud-tag {
+    padding: 6px 10px;
+  }
+
+  .skill-size-xl {
+    font-size: 16px;
+    padding: 8px 14px;
+  }
+
+  .skill-size-lg {
+    font-size: 14px;
+    padding: 7px 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    margin-top: 30px;
+    padding: 20px 16px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .about-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .colors-showcase {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hobbies-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 }
