@@ -14,6 +14,13 @@
     align-items: baseline;
     gap: 14px;
     padding: 48px 0 32px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 32px 24px;
+    margin: 0 -24px 32px -24px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .work-page-title {
@@ -35,6 +42,14 @@
     flex-direction: column;
     gap: 12px;
     margin-bottom: 48px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+    margin-left: -24px;
+    margin-right: -24px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .work-filters input {
@@ -137,9 +152,12 @@
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.28);
-    background: rgb(0, 0, 19);
-    padding-right: 10px;
+    color: rgba(255, 255, 255, 0.65);
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 4px 10px;
+    border-radius: 6px;
     position: relative;
     z-index: 1;
 }
@@ -163,9 +181,14 @@
 .tl-month {
     font-size: 12px;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.38);
+    color: rgba(255, 255, 255, 0.65);
     white-space: nowrap;
     line-height: 1;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 4px 8px;
+    border-radius: 6px;
 }
 
 /* Spine column */
@@ -212,8 +235,8 @@
 .tl-card {
     flex: 1 1 220px;
     max-width: 320px;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.09);
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 12px;
     padding: 14px 16px;
     cursor: pointer;
@@ -221,11 +244,13 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .tl-card:hover {
-    background: rgba(255, 255, 255, 0.07);
-    border-color: rgba(177, 158, 239, 0.35);
+    background: rgba(0, 0, 0, 0.35);
+    border-color: rgba(177, 158, 239, 0.45);
     transform: translateY(-2px);
 }
 
@@ -311,17 +336,19 @@
     font-size: 13px;
     font-family: inherit;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.55);
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.75);
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     cursor: pointer;
     transition: all 0.2s;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .tl-chip:hover {
-    background: rgba(255, 255, 255, 0.09);
-    color: rgba(255, 255, 255, 0.85);
-    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.35);
+    color: rgba(255, 255, 255, 0.95);
+    border-color: rgba(255, 255, 255, 0.25);
 }
 
 .tl-chip-dot {

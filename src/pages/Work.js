@@ -1,13 +1,16 @@
 import { useMemo, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import useLanguage from "../hooks/useLanguage";
+import { translateData } from "../utils/translateData";
+import PixelBlast from "../components/PixelBlast";
 import "../styles/Work.css";
 import portfolio from "../data/portfolio.json";
 
 const STATUS_CONFIG = {
-    in_progress: { label: "En cours",  color: "#B19EEF" },
-    done:        { label: "Terminé",   color: "#67d672" },
-    paused:      { label: "En pause",  color: "#e2ba1c" },
-    stopped:     { label: "Arrêté",    color: "#e63e5d" },
+    in_progress: { key: "status_in_progress", color: "#B19EEF" },
+    done:        { key: "status_done",   color: "#67d672" },
+    paused:      { key: "status_paused",  color: "#e2ba1c" },
+    stopped:     { key: "status_stopped",    color: "#e63e5d" },
 };
 
 function parseDate(str) {
@@ -30,6 +33,7 @@ function parseDate(str) {
 export default function Work() {
     const { projects, tags } = portfolio;
     const navigate = useNavigate();
+    const { t, language } = useLanguage();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -52,13 +56,14 @@ export default function Work() {
     };
 
     const filteredProjects = useMemo(() => {
-        return Object.entries(projects).filter(([_, p]) => {
-            const matchesSearch = p.title.toLowerCase().includes(search.toLowerCase());
+        return Object.entries(projects).filter(([id, p]) => {
+            const displayTitle = translateData(language, 'projects', id, 'title') || p.title;
+            const matchesSearch = displayTitle.toLowerCase().includes(search.toLowerCase());
             const matchesTags = activeTags.length === 0 || activeTags.every((t) => p.tags.includes(t));
             const matchesStatus = activeStatuses.length === 0 || activeStatuses.includes(p.status);
             return matchesSearch && matchesTags && matchesStatus;
         });
-    }, [search, activeTags, activeStatuses, projects]);
+    }, [search, activeTags, activeStatuses, projects, language]);
 
     // Group by date key, separate undated
     const { sortedGroups, undated } = useMemo(() => {
@@ -87,15 +92,32 @@ export default function Work() {
 
     return (
         <main className="work">
+            <PixelBlast
+                className="pixelblast-bg"
+                variant="square"
+                pixelSize={6}
+                color="#B19EEF"
+                patternScale={3}
+                patternDensity={1.2}
+                pixelSizeJitter={0.5}
+                rippleSpeed={0.4}
+                rippleThickness={0.12}
+                rippleIntensityScale={1.5}
+                speed={0.6}
+                edgeFade={0.25}
+                transparent
+            />
             <section className="work-page-header">
-                <h1 className="work-page-title">Projets</h1>
-                <span className="work-page-count">{totalCount} projet{totalCount !== 1 ? "s" : ""}</span>
+                <h1 className="work-page-title">{t('work.title')}</h1>
+                <span className="work-page-count">
+                    {totalCount} {totalCount === 1 ? t('work.project_count_one') : t('work.project_count_other')}
+                </span>
             </section>
 
             <div className="work-filters">
                 <input
                     type="text"
-                    placeholder="Rechercher un projet..."
+                    placeholder={t('work.search_placeholder')}
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                 />
@@ -124,7 +146,7 @@ export default function Work() {
                                 className={`status-filter ${active ? "active" : ""}`}
                                 style={{ "--status-color": status.color }}
                             >
-                                {status.label}
+                                {t(`work.${status.key}`)}
                             </button>
                         );
                     })}
@@ -168,6 +190,8 @@ export default function Work() {
                                     {entries.map(([id, project]) => {
                                         const status = STATUS_CONFIG[project.status];
                                         const projectTags = project.tags.map((t) => tags[t]);
+                                        const displayTitle = translateData(language, 'projects', id, 'title') || project.title;
+                                        const displayTagline = translateData(language, 'projects', id, 'tagline') || project.tagline;
                                         return (
                                             <div
                                                 key={id}
@@ -175,18 +199,18 @@ export default function Work() {
                                                 onClick={() => navigate("/work/" + id)}
                                             >
                                                 <div className="tl-card-header">
-                                                    <span className="tl-card-title">{project.title}</span>
+                                                    <span className="tl-card-title">{displayTitle}</span>
                                                     {status && (
                                                         <span
                                                             className="tl-card-status"
                                                             style={{ "--s-color": status.color }}
                                                         >
-                                                            {status.label}
+                                                            {t(`work.${status.key}`)}
                                                         </span>
                                                     )}
                                                 </div>
-                                                {project.tagline && (
-                                                    <p className="tl-card-tagline">{project.tagline}</p>
+                                                {displayTagline && (
+                                                    <p className="tl-card-tagline">{displayTagline}</p>
                                                 )}
                                                 <div className="tl-card-tags">
                                                     {projectTags.map((tag) => (
@@ -211,15 +235,17 @@ export default function Work() {
                 {/* Undated projects */}
                 {undated.length > 0 && (
                     <div className="tl-undated">
-                        <span className="tl-undated-label">Autres projets</span>
+                        <span className="tl-undated-label">{t('work.other_projects')}</span>
                         <div className="tl-undated-chips">
-                            {undated.map(([id, project]) => (
+                            {undated.map(([id, project]) => {
+                                const displayTitle = translateData(language, 'projects', id, 'title') || project.title;
+                                return (
                                 <button
                                     key={id}
                                     className="tl-chip"
                                     onClick={() => navigate("/work/" + id)}
                                 >
-                                    {project.title}
+                                    {displayTitle}
                                     {project.tags.map((t) => (
                                         <span
                                             key={t}
@@ -228,7 +254,8 @@ export default function Work() {
                                         />
                                     ))}
                                 </button>
-                            ))}
+                                );
+                            })}
                         </div>
                     </div>
                 )}
