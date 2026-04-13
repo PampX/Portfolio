@@ -79,6 +79,25 @@ button {
     border-color: rgba(177, 158, 239, 0.5);
 }
 
+.language_toggle {
+    font-size: 11px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    margin-left: 12px;
+    transition: all 0.18s ease;
+    cursor: pointer;
+    letter-spacing: 0.1em;
+}
+
+.language_toggle:hover {
+    color: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
 @media (max-width: 500px) {
     .header {
         padding: 0 20px;
